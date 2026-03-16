@@ -1,0 +1,14 @@
+@import './design-tokens.css';
+@import './layout.css';
+@import './components.css';
+@import './animations.css';
+
+/* Custom non-BEM global tweaks if any */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+body {
+  overflow-x: hidden;
+}
