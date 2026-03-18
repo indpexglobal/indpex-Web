@@ -4,149 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Industries Served | Indpex Global</title>
-    <meta name="description" content="Indpex Global serves key industrial sectors including Manufacturing, Construction, Energy, and Engineering. Discover our sector-specific solutions.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="navbar-root"></div>
 
     <main>
-        <!-- Hero Banner -->
-        <section class="banner-secondary" style="background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1454165833767-027ffea9e77b?auto=format&fit=crop&q=80&w=2000');">
+        <!-- Corporate Banner -->
+        <section class="banner-corp">
             <div class="l-container">
-                <div class="banner-secondary__content" data-reveal="fade-in">
-                    <h1 class="banner-secondary__title">Sector Expertise</h1>
-                    <p class="banner-secondary__text">Specialized supply chain and trade solutions for diverse global industries.</p>
+                <div class="banner-corp__content" data-reveal="fade-in">
+                    <h1 class="banner-corp__title">Specialized Bearing Solutions</h1>
+                    <p class="banner-corp__lead">Expertise in importing and distributing high-precision ball and roller bearings across critical industrial sectors.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Industries Detailed -->
+        <!-- Industries Grid -->
         <section class="l-section">
             <div class="l-container">
-                
-                <!-- Manufacturing -->
-                <div class="industry-detail" id="manufacturing" data-reveal="fade-in">
-                    <div class="l-grid l-grid--2" style="align-items: center; gap: var(--spacing-12);">
-                        <div class="industry-detail__visual">
-                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800" alt="Manufacturing" style="border-radius: var(--radius-lg);">
+                <div class="l-grid l-grid--2">
+                    <!-- Automotive -->
+                    <div class="card-corp sector-card-corp" id="automotive" data-reveal="slide-up">
+                        <div class="sector-card-corp__visual">
+                            <img src="/bearings-hero.png" alt="Automotive Bearings">
                         </div>
-                        <div class="industry-detail__content">
-                            <h2 class="industry-detail__title">Manufacturing</h2>
-                            <p class="industry-detail__text">
-                                We provide high-precision machinery and raw materials to support advanced manufacturing processes. Our sourcing ensures that production lines maintain peak efficiency with certified components.
-                            </p>
-                            <ul class="check-list">
-                                <li>Heavy Machinery & Parts</li>
-                                <li>Automation Components</li>
-                                <li>Precision Engineering Tools</li>
+                        <div class="sector-card-corp__body">
+                            <h2 class="sector-title-corp">Automotive & transport</h2>
+                            <p class="sector-text-corp">Supplying ultra-precision ball bearings and heavy-duty roller bearings for modern vehicle drivetrains and hubs.</p>
+                            <ul class="sector-list-corp">
+                                <li>Deep Groove Ball Bearings</li>
+                                <li>Tapered Roller Bearings</li>
+                                <li>Hub Unit Assemblies</li>
                             </ul>
-                            <a href="products.html" class="btn btn--outline" style="margin-top: var(--spacing-6);">View Related Products</a>
+                        </div>
+                    </div>
+
+                    <!-- Energy & Infrastructure -->
+                    <div class="card-corp sector-card-corp" id="energy" data-reveal="slide-up">
+                        <div class="sector-card-corp__visual">
+                            <img src="https://images.unsplash.com/photo-1466611653911-954ff2127c8b?auto=format&fit=crop&q=80&w=800" alt="Energy Infrastructure">
+                        </div>
+                        <div class="sector-card-corp__body">
+                            <h2 class="sector-title-corp">Energy & Infrastructure</h2>
+                            <p class="sector-text-corp">Providing critical bearing systems for renewable energy installations and large-scale power infrastructure projects.</p>
+                            <ul class="sector-list-corp">
+                                <li>Main Shaft Bearings</li>
+                                <li>Pitch & Yaw Drive Bearings</li>
+                                <li>Insulated Electrical Bearings</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-
-                <div style="height: var(--spacing-24);"></div>
-
-                <!-- Construction -->
-                <div class="industry-detail industry-detail--reverse" id="construction" data-reveal="fade-in">
-                    <div class="l-grid l-grid--2" style="align-items: center; gap: var(--spacing-12);">
-                        <div class="industry-detail__visual">
-                            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=800" alt="Construction" style="border-radius: var(--radius-lg);">
-                        </div>
-                        <div class="industry-detail__content">
-                            <h2 class="industry-detail__title">Construction & Infrastructure</h2>
-                            <p class="industry-detail__text">
-                                Supporting large-scale residential and commercial infrastructure projects with bulk structural materials and specialized heavy equipment.
-                            </p>
-                            <ul class="check-list">
-                                <li>Structural Steel Beams</li>
-                                <li>Heavy Earthmoving Equipment</li>
-                                <li>Industrial Fasteners & Fixings</li>
-                            </ul>
-                            <a href="products.html" class="btn btn--outline" style="margin-top: var(--spacing-6);">View Related Products</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="height: var(--spacing-24);"></div>
-
-                <!-- Energy -->
-                <div class="industry-detail" id="energy" data-reveal="fade-in">
-                    <div class="l-grid l-grid--2" style="align-items: center; gap: var(--spacing-12);">
-                        <div class="industry-detail__visual">
-                            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=800" alt="Energy" style="border-radius: var(--radius-lg);">
-                        </div>
-                        <div class="industry-detail__content">
-                            <h2 class="industry-detail__title">Energy & Utilities</h2>
-                            <p class="industry-detail__text">
-                                Delivering specialized equipment and components for the energy sector, ranging from traditional power generation to renewable infrastructure development.
-                            </p>
-                            <ul class="check-list">
-                                <li>Transmission Components</li>
-                                <li>Renewable Energy Systems</li>
-                                <li>Protective Gear & Safety Systems</li>
-                            </ul>
-                            <a href="products.html" class="btn btn--outline" style="margin-top: var(--spacing-6);">View Related Products</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="height: var(--spacing-24);"></div>
-
-                <!-- Automotive -->
-                <div class="industry-detail industry-detail--reverse" id="automotive" data-reveal="fade-in">
-                    <div class="l-grid l-grid--2" style="align-items: center; gap: var(--spacing-12);">
-                        <div class="industry-detail__visual">
-                            <img src="https://images.unsplash.com/photo-1590845947670-c009801ffa74?auto=format&fit=crop&q=80&w=800" alt="Automotive Industry" style="border-radius: var(--radius-lg);">
-                        </div>
-                        <div class="industry-detail__content">
-                            <h2 class="industry-detail__title">Automotive & e-Mobility</h2>
-                            <p class="industry-detail__text">
-                                Supplying high-grade alloys, precision components, and logistics support for global automotive manufacturing and the evolving e-mobility supply chain.
-                            </p>
-                            <ul class="check-list">
-                                <li>Custom Precision Castings</li>
-                                <li>Electric Drivetrain Components</li>
-                                <li>Specialized Steel & Aluminum</li>
-                            </ul>
-                            <a href="products.html" class="btn btn--outline" style="margin-top: var(--spacing-6);">View Related Products</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="height: var(--spacing-24);"></div>
-
-                <!-- Engineering -->
-                <div class="industry-detail" id="engineering" data-reveal="fade-in">
-                    <div class="l-grid l-grid--2" style="align-items: center; gap: var(--spacing-12);">
-                        <div class="industry-detail__visual">
-                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=800" alt="Engineering" style="border-radius: var(--radius-lg);">
-                        </div>
-                        <div class="industry-detail__content">
-                            <h2 class="industry-detail__title">General Engineering</h2>
-                            <p class="industry-detail__text">
-                                Providing technical support and reliable sourcing for general engineering firms, from heavy machinery to specialized tools and fabrication materials.
-                            </p>
-                            <ul class="check-list">
-                                <li>Custom Component Fabrication</li>
-                                <li>Technical Sourcing Support</li>
-                                <li>MRO Supplies & Equipment</li>
-                            </ul>
-                            <a href="products.html" class="btn btn--outline" style="margin-top: var(--spacing-6);">View Related Products</a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </section>
     </main>
 
     <div id="footer-root"></div>
+
+    <style>
+        .banner-corp {
+            background-color: var(--color-primary-dark);
+            color: #fff;
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+        .banner-corp__title { font-size: 3rem; margin-bottom: 1rem; color: #fff; }
+        .banner-corp__lead { font-size: 1.125rem; max-width: 600px; margin: 0 auto; opacity: 0.8; }
+
+        .sector-card-corp { display: flex; flex-direction: row; padding: 0 !important; overflow: hidden; align-items: stretch; }
+        .sector-card-corp__visual { width: 40%; min-width: 250px; }
+        .sector-card-corp__visual img { width: 100%; height: 100%; object-fit: cover; }
+        .sector-card-corp__body { padding: 3rem; flex: 1; }
+        .sector-title-corp { font-size: 1.75rem; color: var(--color-primary-dark); margin-bottom: 1.5rem; text-transform: uppercase; }
+        .sector-text-corp { color: var(--color-text-muted); margin-bottom: 2rem; }
+        .sector-list-corp { list-style: none; display: grid; grid-template-columns: 1fr; gap: 0.75rem; }
+        .sector-list-corp li { font-weight: 700; color: var(--color-primary); font-size: 0.8125rem; text-transform: uppercase; }
+        .sector-list-corp li::before { content: '•'; color: var(--color-accent); margin-right: 0.75rem; }
+
+        @media (max-width: 768px) {
+            .sector-card-corp { flex-direction: column; }
+            .sector-card-corp__visual { width: 100%; height: 200px; }
+            .sector-card-corp__body { padding: 2rem; }
+        }
+    </style>
 
     <script type="module" src="main.js"></script>
 </body>

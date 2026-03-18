@@ -10,6 +10,8 @@ export default defineConfig({
         industries: resolve(__dirname, 'industries.html'),
         about: resolve(__dirname, 'about.html'),
         contact: resolve(__dirname, 'contact.html'),
+        admin: resolve(__dirname, 'admin.html'),
+        error404: resolve(__dirname, '404.html'),
       },
     },
   },

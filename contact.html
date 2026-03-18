@@ -3,94 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Our Trade Specialists | Indpex Global</title>
-    <meta name="description" content="Get in touch with Indpex Global for inquiry relative to industrial machinery, metals, and global trade solutions.">
+    <title>Contact Us | Indpex Global</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="navbar-root"></div>
 
     <main>
-        <section class="banner-secondary" style="background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1516383748286-570423e78da1?auto=format&fit=crop&q=80&w=2000');">
+        <!-- Corporate Banner -->
+        <section class="banner-corp">
             <div class="l-container">
-                <div class="banner-secondary__content" data-reveal="fade-in">
-                    <h1 class="banner-secondary__title">B2B Inquiries</h1>
-                    <p class="banner-secondary__text">Consult with our global logistics and industrial sourcing experts today.</p>
+                <div class="banner-corp__content" data-reveal="fade-in">
+                    <h1 class="banner-corp__title">Procurement Inquiry</h1>
+                    <p class="banner-corp__lead">Consult with our industrial specialists for custom sourcing and logistics solutions.</p>
                 </div>
             </div>
         </section>
 
+        <!-- Professional Inquiry Section -->
         <section class="l-section">
             <div class="l-container">
-                <div class="l-grid l-grid--2" style="gap: var(--spacing-16);">
-                    
-                    <div class="contact-info" data-reveal="slide-right">
-                        <h2 class="section-header__title" style="text-align: left;">Establish Your Global <br>Connection</h2>
-                        <p class="industry-detail__text">
-                            Whether you are looking for specific machinery or need a long-term logistics partner, our specialists are ready to assist with enterprise-grade solutions.
-                        </p>
-
-                        <div class="contact-methods" style="margin-top: var(--spacing-12);">
-                            <div class="contact-method">
-                                <h4 class="contact-method__title">Corporate Office</h4>
-                                <p class="contact-method__text">123 Industrial Hub, Business District, <br>Tech City, Zip 56789</p>
-                            </div>
-                            <div class="contact-method" style="margin-top: var(--spacing-6);">
-                                <h4 class="contact-method__title">Email Aliases</h4>
-                                <p class="contact-method__text">General: contact@indpex-global.com <br>Sales: trade@indpex-global.com</p>
-                            </div>
-                            <div class="contact-method" style="margin-top: var(--spacing-6);">
-                                <h4 class="contact-method__title">Phone Connectivity</h4>
-                                <p class="contact-method__text">Headquarters: +1 (555) 123-4567 <br>Hotline: +1 (555) 987-6543</p>
-                            </div>
+                <div class="l-grid l-grid--2">
+                    <div class="contact-corp-info" data-reveal="slide-right">
+                        <h2 class="corp-h2">Speak with a Specialist</h2>
+                        <p>Our dedicated procurement team manages global supply chains across multiple time zones. Please submit your technical requirements and contact information below.</p>
+                        
+                        <div class="c-info-item">
+                            <h4>Corporate Headquarters</h4>
+                            <p>International Logistics Center, Block 42, Global Trade Hub</p>
+                        </div>
+                        <div class="c-info-item">
+                            <h4>Procurement Email</h4>
+                            <p>inquiry@indpexglobal.com</p>
                         </div>
                     </div>
 
-                    <div class="contact-form-container" data-reveal="slide-left">
-                        <form class="contact-form" id="quote">
-                            <h3 style="margin-bottom: var(--spacing-8);">Inquiry Details</h3>
-                            
-                            <div class="form-grid">
-                                <div class="form-group">
-                                    <label class="form-label" for="name">Full Name</label>
-                                    <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label" for="company">Company Name</label>
-                                    <input type="text" id="company" name="company" class="form-input" placeholder="Enterprize Ltd." required>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label" for="country">Country</label>
-                                    <input type="text" id="country" name="country" class="form-input" placeholder="Germany" required>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label" for="product">Product Required</label>
-                                    <input type="text" id="product" name="product" class="form-input" placeholder="Hydraulic Press" required>
-                                </div>
-                                <div class="form-group" style="grid-column: span 2;">
-                                    <label class="form-label" for="quantity">Quantity</label>
-                                    <input type="text" id="quantity" name="quantity" class="form-input" placeholder="Unites / Tons" required>
-                                </div>
-                                <div class="form-group" style="grid-column: span 2;">
-                                    <label class="form-label" for="message">Message</label>
-                                    <textarea id="message" name="message" class="form-input" rows="5" placeholder="Detailed requirements..." required></textarea>
-                                </div>
+                    <div class="card-corp form-corp-card" data-reveal="slide-up">
+                        <form class="contact-form">
+                            <div class="f-group-corp">
+                                <label>Full Name / Title</label>
+                                <input type="text" placeholder="e.g. Director of Procurement" required>
                             </div>
-
-                            <button type="submit" class="btn btn--primary" style="width: 100%; margin-top: var(--spacing-6);">Submit Inquiry</button>
+                            <div class="f-group-corp">
+                                <label>Corporate Email</label>
+                                <input type="email" placeholder="name@company.com" required>
+                            </div>
+                            <div class="f-group-corp">
+                                <label>Industry Sector</label>
+                                <select required>
+                                    <option value="">Select Sector...</option>
+                                    <option>Energy & Power</option>
+                                    <option>Manufacturing</option>
+                                    <option>Metal Products</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="f-group-corp">
+                                <label>Technical Requirements</label>
+                                <textarea rows="6" placeholder="Describe components, volumes, or machinery specifications..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--primary">Submit Request</button>
                         </form>
                     </div>
-
                 </div>
             </div>
         </section>
     </main>
 
     <div id="footer-root"></div>
+
+    <style>
+        .banner-corp {
+            background-color: var(--color-primary-dark);
+            color: #fff;
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+        .banner-corp__title { font-size: 3rem; margin-bottom: 1rem; color: #fff; }
+        .banner-corp__lead { font-size: 1.125rem; max-width: 600px; margin: 0 auto; opacity: 0.8; }
+
+        .corp-h2 { font-size: 2rem; margin-bottom: 25px; color: var(--color-primary-dark); }
+        .contact-corp-info p { color: var(--color-text-main); margin-bottom: 40px; }
+        .c-info-item { margin-bottom: 30px; }
+        .c-info-item h4 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-accent); margin-bottom: 10px; }
+        .c-info-item p { font-size: 1rem; color: var(--color-text-main); font-weight: 500; }
+
+        .f-group-corp { margin-bottom: 20px; display: flex; flex-direction: column; gap: 8px; }
+        .f-group-corp label { font-size: 0.8125rem; font-weight: 700; color: var(--color-primary-dark); }
+        .f-group-corp input, .f-group-corp select, .f-group-corp textarea {
+            padding: 0.75rem;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            background: #fdfdfd;
+        }
+    </style>
 
     <script type="module" src="main.js"></script>
 </body>
