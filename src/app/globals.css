@@ -497,3 +497,116 @@ p {
     .sector-tiles-corp { grid-template-columns: 1fr; }
     .hero-corp__content { padding-top: 4rem; }
 }
+
+/* --- Premium Floating Glass Header --- */
+.header-corp {
+    position: fixed;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92%;
+    max-width: 1200px;
+    z-index: 2000;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 
+        0 4px 6px -1px rgba(0, 0, 0, 0.05),
+        0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 100px; /* Pill Shape */
+    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.header--scrolled {
+    top: 0.75rem;
+    width: 95%;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.nav-corp { 
+    padding: 0.75rem 2rem; 
+}
+.nav-corp__flex { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 2rem;
+}
+
+.nav-corp__logo {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--color-primary-dark);
+    text-decoration: none;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+}
+.logo-accent { 
+    color: var(--color-primary); 
+    font-weight: 300; 
+    margin-left: 4px; 
+}
+
+.nav-corp__list { 
+    display: flex; 
+    gap: 2rem; 
+    align-items: center; 
+    list-style: none;
+}
+.nav-corp__link {
+    text-decoration: none;
+    color: var(--color-text-main);
+    font-weight: 600;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: color 0.3s ease;
+}
+.nav-corp__link:hover { 
+    color: var(--color-accent); 
+}
+
+.nav-corp__toggle { 
+    display: none; 
+    flex-direction: column; 
+    gap: 5px;
+    width: 24px;
+    border: none; 
+    background: none; 
+    cursor: pointer;
+}
+.nav-corp__toggle span { 
+    width: 100%; 
+    height: 2px; 
+    background: var(--color-primary-dark); 
+    border-radius: 2px;
+}
+
+.btn--nav { 
+    padding: 0.5rem 1.25rem !important; 
+    font-size: 0.75rem !important; 
+    border-radius: 50px !important;
+}
+
+@media (max-width: 1024px) {
+    .nav-corp__list { 
+        display: none; 
+        position: absolute;
+        top: 100%;
+        left: 2%;
+        width: 96%;
+        background: rgba(255, 255, 255, 0.98);
+        flex-direction: column;
+        padding: 2rem;
+        border-radius: 24px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        margin-top: 1rem;
+    }
+    .nav-corp__list--open { display: flex; }
+    .nav-corp__toggle { display: flex; }
+    .btn--nav { display: none; }
+}
