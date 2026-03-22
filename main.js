@@ -1,6 +1,7 @@
 import './src/styles/main.css';
 import { renderNavbar } from './src/components/Navbar';
 import { renderFooter } from './src/components/Footer';
+import { renderWhatsAppWidget } from './src/components/WhatsAppWidget';
 import { initScrollAnimations, initParallax } from './src/utils/animations';
 
 /**
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Render Global Components
     renderNavbar('navbar-root');
     renderFooter('footer-root');
+    renderWhatsAppWidget();
 
     // 2. Initialize Animation Engine
     setTimeout(() => {

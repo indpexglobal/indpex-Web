@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Indpex Global</title>
+  <script type="module" crossorigin src="/assets/admin-BUtIjeHi.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/supabase-BMU8zLYl.js">
+  <link rel="stylesheet" crossorigin href="/assets/admin-R_tPR9W8.css">
+</head>
+<body class="admin-body">
+    <!-- Auth View -->
+    <div id="auth-view" class="auth-container">
+        <form id="login-form" class="auth-card">
+            <h2 style="margin-bottom: 2rem;">Admin Login</h2>
+            <div class="f-group-admin">
+                <label>Email Address</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="f-group-admin">
+                <label>Password</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit" class="btn btn--primary" style="width: 100%;">Access Dashboard</button>
+            <p id="auth-error" style="color: #ef4444; font-size: 0.8rem; margin-top: 1rem; border-left: 2px solid #ef4444; padding-left: 10px; display: none;"></p>
+        </form>
+    </div>
+
+    <!-- Dashboard View -->
+    <div id="dashboard-view" class="admin-layout" style="display: none;">
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">INDPEX <span style="opacity:0.6;font-weight:400;">ADMIN</span></div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">Product Catalog</a>
+                <a href="#" class="nav-item">Inquiries</a>
+                <a href="#" class="nav-item">Site Settings</a>
+            </nav>
+            <div style="padding: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <button id="logout-btn" class="btn btn--outline" style="width:100%;color:#fff;border-color:rgba(255,255,255,0.2);font-size:0.7rem;">Sign Out</button>
+            </div>
+        </aside>
+
+        <main class="admin-main">
+            <header class="admin-header">
+                <h2>Product Catalog <span style="font-size:0.8rem;font-weight:400;color:var(--color-text-muted);">(Import/Export Management)</span></h2>
+                <button id="open-add-modal" class="btn btn--primary">+ New Component</button>
+            </header>
+
+            <div id="admin-product-grid" class="product-grid-admin">
+                <!-- Products dynamically loaded -->
+                <div style="padding: 4rem; text-align: center; color: var(--color-text-muted);">Initialising catalog database...</div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal-admin">
+        <div class="modal-content-admin">
+            <h3 style="margin-bottom: 2rem;">Component Details</h3>
+            <form id="product-form">
+                <input type="hidden" id="p-id">
+                <div class="f-group-admin">
+                    <label>Title / Model Number</label>
+                    <input type="text" id="p-title" required>
+                </div>
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem;">
+                    <div class="f-group-admin">
+                        <label>Category</label>
+                        <select id="p-category" required>
+                            <option>Bearings</option>
+                            <option>Precision Components</option>
+                            <option>Machinery</option>
+                            <option>Metals</option>
+                        </select>
+                    </div>
+                    <div class="f-group-admin">
+                        <label>Price (Optional)</label>
+                        <input type="number" id="p-price">
+                    </div>
+                </div>
+                <div class="f-group-admin">
+                    <label>Image Catalog Path</label>
+                    <input type="file" id="p-image" accept="image/*">
+                </div>
+                <div class="f-group-admin">
+                    <label>Technical Description</label>
+                    <textarea id="p-description" rows="4"></textarea>
+                </div>
+                <div style="display:flex; justify-content: flex-end; gap: 1rem; margin-top: 2rem;">
+                    <button type="button" class="btn btn--outline modal-close">Cancel</button>
+                    <button type="submit" class="btn btn--primary">Save Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
