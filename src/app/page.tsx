@@ -132,31 +132,43 @@ export default function Home() {
       <section className="l-section" style={{ padding: '5rem 0', background: '#fff' }}>
         <div className="l-container">
           <div className="card-corp" data-reveal="fade-in" style={{ textAlign: 'center', borderTop: '3px solid var(--color-primary)' }}>
-            <h2 className="corp-h2" style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Authorized Partnerships</h2>
+            <h2 className="corp-h2" style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Authorised Dealerships & Strategic Stock</h2>
             <p style={{ marginBottom: '2rem', color: 'var(--color-text-main)', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
-              We represent global standards of quality through our strategic partnerships. We are proud authorized dealers and specialized stockists of world-renowned manufacturing brands.
+              We represent global standards of quality through our strategic partnerships. We are proud **Authorised Dealers** and specialized **Stockists** of world-renowned manufacturing brands.
             </p>
             
             <div className="marquee-wrapper">
               <div className="marquee-content">
+                <span style={{ fontWeight: 400, fontSize: '0.8rem', color: 'var(--color-text-muted)', textTransform: 'uppercase' }}>Authorised Dealers:</span>
                 <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>SKF</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>TATA</span>
                 <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>FAG</span>
+                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>TATA</span>
                 <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>NRB</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>NMB</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>NBC</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>TIMKEN</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>ARB</span>
                 <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>VAIB</span>
                 <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>CSG</span>
                 
+                <span style={{ fontWeight: 400, fontSize: '0.8rem', color: 'var(--color-text-muted)', textTransform: 'uppercase', marginLeft: '2rem' }}>Stockists:</span>
+                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>NBC</span>
+                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>ARB</span>
+                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>TIMKEN</span>
+                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>LINCOLN</span>
+                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>NMB</span>
+
+                {/* Duplicate Set for infinite scroll */}
+                <span style={{ fontWeight: 400, fontSize: '0.8rem', color: 'var(--color-text-muted)', textTransform: 'uppercase', marginLeft: '2rem' }}>Authorised Dealers:</span>
                 <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>SKF</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>TATA</span>
                 <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>FAG</span>
+                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>TATA</span>
+                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>NRB</span>
                 <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>VAIB</span>
                 <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>CSG</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>NRB</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>NBC (Stockist)</span>
+                
+                <span style={{ fontWeight: 400, fontSize: '0.8rem', color: 'var(--color-text-muted)', textTransform: 'uppercase', marginLeft: '2rem' }}>Stockists:</span>
+                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>NBC</span>
+                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>ARB</span>
+                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>TIMKEN</span>
+                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>LINCOLN</span>
+                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>NMB</span>
               </div>
             </div>
           </div>

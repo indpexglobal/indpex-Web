@@ -12,7 +12,7 @@ interface Product {
     price: number | null;
 }
 
-const categoryDetails: Record<string, { description: string; items?: string[]; brands?: string[] }> = {
+const categoryDetails: Record<string, { description: string; items?: string[]; dealers?: string[]; stockists?: string[] }> = {
     "All Products": {
         description: "Direct-from-manufacturer supply chain for high-precision industrial components."
     },
@@ -26,12 +26,13 @@ const categoryDetails: Record<string, { description: string; items?: string[]; b
             "Angular Roller Bearings",
             "Pillow Block/ Plummer Block Housings"
         ],
-        brands: ["SKF", "FAG", "NRB", "NMB", "TATA", "NBC", "ARB", "TIMKEN", "VAIB", "CSG"]
+        dealers: ["SKF", "FAG", "TATA", "NRB", "VAIB", "CSG"],
+        stockists: ["NBC", "ARB", "TIMKEN", "LINCOLN", "NMB"]
     },
     "Transmission & Motion": {
         description: "Durable power transmission and mechanical motion control systems.",
         items: [
-            "V-Belt",
+            "V-Belt", 
             "Timing Belts",
             "Roller and Conveyer Chains",
             "Shaft Couplings"
@@ -58,16 +59,16 @@ const categoryDetails: Record<string, { description: string; items?: string[]; b
     "Electrical & Wiring": {
         description: "Professional electrical connection and air fitting components.",
         items: [
-            "Terminals and connectors",
+            "Terminals and connectors", 
             "Circuit Breakers",
-            "Air Fittings",
+            "Air Fittings", 
             "Tubings"
         ]
     },
     "MRO Consumables": {
         description: "Essential maintenance, repair, and operation supplies.",
         items: [
-            "Cutting Tools",
+            "Cutting Tools", 
             "Drills",
             "Lubricants and Grease"
         ]
@@ -178,11 +179,21 @@ export default function Products() {
                                 ))}
                             </div>
                         )}
-                        {categoryDetails[filter]?.brands && (
+                        {categoryDetails[filter]?.dealers && (
                             <div style={{ marginTop: '1.5rem', paddingTop: '1rem', borderTop: '1px solid var(--color-border)' }}>
-                                <span style={{ fontWeight: 700, fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--color-text-muted)' }}>Authorized Brands:</span>
+                                <span style={{ fontWeight: 700, fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--color-text-muted)' }}>Authorised Dealers:</span>
                                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginTop: '0.5rem', fontWeight: 800, color: 'var(--color-primary-dark)' }}>
-                                    {categoryDetails[filter].brands.map((brand: string) => (
+                                    {categoryDetails[filter].dealers.map((brand: string) => (
+                                        <span key={brand}>{brand}</span>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+                        {categoryDetails[filter]?.stockists && (
+                            <div style={{ marginTop: '1rem' }}>
+                                <span style={{ fontWeight: 700, fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--color-text-muted)' }}>Stockists:</span>
+                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginTop: '0.5rem', fontWeight: 800, color: 'var(--color-primary)' }}>
+                                    {categoryDetails[filter].stockists.map((brand: string) => (
                                         <span key={brand}>{brand}</span>
                                     ))}
                                 </div>
