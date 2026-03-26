@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { supabase } from "@/lib/supabase";
+import { useState } from "react";
 
 interface Product {
     id: string;
@@ -9,7 +8,6 @@ interface Product {
     category: string;
     image_url: string;
     description: string;
-    price: number | null;
 }
 
 const categoryDetails: Record<string, { description: string; items?: string[]; dealers?: string[]; stockists?: string[] }> = {
@@ -85,33 +83,57 @@ const categoryDetails: Record<string, { description: string; items?: string[]; d
     }
 };
 
+const STATIC_PRODUCTS: Product[] = [
+    // Bearings
+    { id: 'b1', title: 'Deep Grove Ball Bearings', category: 'Bearings', image_url: 'https://images.unsplash.com/photo-1594814136440-d4b3506450f3?auto=format&fit=crop&q=80&w=400', description: 'High-precision deep groove ball bearings for low noise and vibration.' },
+    { id: 'b2', title: 'Miniature Bearings', category: 'Bearings', image_url: 'https://images.unsplash.com/photo-1590231505291-76495b682650?auto=format&fit=crop&q=80&w=400', description: 'Small-scale precision bearings for high-speed applications.' },
+    { id: 'b3', title: 'Cylindrical Roller Bearings', category: 'Bearings', image_url: 'https://images.unsplash.com/photo-159742324403d-d556d0bd1c9c?auto=format&fit=crop&q=80&w=400', description: 'Heavy-duty cylindrical rollers for high radial loads.' },
+    { id: 'b4', title: 'Needle Roller Bearings', category: 'Bearings', image_url: 'https://images.unsplash.com/photo-1581093450021-4a7360e9a6ad?auto=format&fit=crop&q=80&w=400', description: 'Compact needle rollers for limited spatial applications.' },
+    { id: 'b5', title: 'Angular Roller Bearings', category: 'Bearings', image_url: 'https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=400', description: 'Optimized for combined radial and axial loads.' },
+    { id: 'b6', title: 'Pillow Block Housings', category: 'Bearings', image_url: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=400', description: 'Robust mounting solutions for industrial shafts.' },
+
+    // Transmission
+    { id: 't1', title: 'Heavy Duty V-Belt', category: 'Transmission & Motion', image_url: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=400', description: 'High-performance V-belts for efficient power transmission.' },
+    { id: 't2', title: 'Industrial Timing Belts', category: 'Transmission & Motion', image_url: 'https://images.unsplash.com/photo-1581093452021-996ffebfd28c?auto=format&fit=crop&q=80&w=400', description: 'Synchronous belts for precise motion control.' },
+    { id: 't3', title: 'Roller & Conveyor Chains', category: 'Transmission & Motion', image_url: 'https://images.unsplash.com/photo-1581092162384-8987ec176471?auto=format&fit=crop&q=80&w=400', description: 'Durable chains for heavy-load industrial conveyors.' },
+    { id: 't4', title: 'Precision Shaft Couplings', category: 'Transmission & Motion', image_url: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400', description: 'Flexible couplings for reliable shaft connections.' },
+
+    // Sealing
+    { id: 's1', title: 'Industrial O-Rings', category: 'Sealing & Fluid Control', image_url: 'https://images.unsplash.com/photo-1581092580497-e0d23cb61402?auto=format&fit=crop&q=80&w=400', description: 'Standard and custom O-rings for various sealing needs.' },
+    { id: 's2', title: 'High-Temp Gaskets', category: 'Sealing & Fluid Control', image_url: 'https://images.unsplash.com/photo-1581092334651-ddf26d9a1930?auto=format&fit=crop&q=80&w=400', description: 'Resilient gaskets for extreme thermal environments.' },
+    { id: 's3', title: 'Mechanical Seals', category: 'Sealing & Fluid Control', image_url: 'https://images.unsplash.com/photo-1581092162921-950c05874251?auto=format&fit=crop&q=80&w=400', description: 'Precision seals for pumps and rotating equipment.' },
+    { id: 's4', title: 'Hydraulic Fittings', category: 'Sealing & Fluid Control', image_url: 'https://images.unsplash.com/photo-1581093806221-70f90c9b071a?auto=format&fit=crop&q=80&w=400', description: 'High-pressure fittings for hydraulic systems.' },
+
+    // Fasteners
+    { id: 'f1', title: 'Bolts, Nuts & Washers', category: 'Fasteners & Fixings', image_url: 'https://images.unsplash.com/photo-1581092918056-0ea6541b972c?auto=format&fit=crop&q=80&w=400', description: 'Comprehensive range of industrial fasteners.' },
+    { id: 'f2', title: 'Threaded Inserts & Studs', category: 'Fasteners & Fixings', image_url: 'https://images.unsplash.com/photo-1581092580497-e0d23cb61402?auto=format&fit=crop&q=80&w=400', description: 'Precision studs for heavy machinery assembly.' },
+    { id: 'f3', title: 'Spring Pins', category: 'Fasteners & Fixings', image_url: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400', description: 'Self-retaining pins for secure mechanical joints.' },
+    { id: 'f4', title: 'Internal/External Circlips', category: 'Fasteners & Fixings', image_url: 'https://images.unsplash.com/photo-1581093450021-4a7360e9a6ad?auto=format&fit=crop&q=80&w=400', description: 'Retaining rings for shaft and bore security.' },
+
+    // Electrical
+    { id: 'e1', title: 'Terminals & Connectors', category: 'Electrical & Wiring', image_url: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=400', description: 'High-conductivity electrical connectors.' },
+    { id: 'e2', title: 'Industrial Circuit Breakers', category: 'Electrical & Wiring', image_url: 'https://images.unsplash.com/photo-1581093452021-996ffebfd28c?auto=format&fit=crop&q=80&w=400', description: 'Safety breakers for industrial power circuits.' },
+    { id: 'e3', title: 'Pneumatic Air Fittings', category: 'Electrical & Wiring', image_url: 'https://images.unsplash.com/photo-1581092162384-8987ec176471?auto=format&fit=crop&q=80&w=400', description: 'Quick-connect fittings for air systems.' },
+    { id: 'e4', title: 'Industrial Tubings', category: 'Electrical & Wiring', image_url: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400', description: 'High-durability tubing for fluid and air.' },
+
+    // MRO
+    { id: 'm1', title: 'Precision Cutting Tools', category: 'MRO Consumables', image_url: 'https://images.unsplash.com/photo-1581092580497-e0d23cb61402?auto=format&fit=crop&q=80&w=400', description: 'High-speed steel tools for industrial machining.' },
+    { id: 'm2', title: 'Industrial Drills', category: 'MRO Consumables', image_url: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400', description: 'Heavy-duty drill bits for metal and concrete.' },
+    { id: 'm3', title: 'Lubricants & Grease', category: 'MRO Consumables', image_url: 'https://images.unsplash.com/photo-1581093450021-4a7360e9a6ad?auto=format&fit=crop&q=80&w=400', description: 'Specialized lubricants for high-friction environments.' },
+
+    // Automotive
+    { id: 'a1', title: 'Engine Pump Impellers', category: 'Automotives & Engine', image_url: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=400', description: 'Precision impellers for automotive water pumps.' },
+    { id: 'a2', title: 'Valve Guides & Tappets', category: 'Automotives & Engine', image_url: 'https://images.unsplash.com/photo-1581093452021-996ffebfd28c?auto=format&fit=crop&q=80&w=400', description: 'OEM-grade engine components for high durability.' },
+    { id: 'a3', title: 'Piston Rings & Liners', category: 'Automotives & Engine', image_url: 'https://images.unsplash.com/photo-1581092162384-8987ec176471?auto=format&fit=crop&q=80&w=400', description: 'Advanced piston sealing and liner systems.' },
+    { id: 'a4', title: 'Automotive Bearings', category: 'Automotives & Engine', image_url: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400', description: 'Full range of bearings for vehicle drivetrains.' },
+];
+
 export default function Products() {
-    const [products, setProducts] = useState<Product[]>([]);
     const [filter, setFilter] = useState("All Products");
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        fetchProducts();
-    }, []);
-
-    async function fetchProducts() {
-        setLoading(true);
-        const { data, error } = await supabase
-            .from('products')
-            .select('*')
-            .order('created_at', { ascending: false });
-
-        if (error) {
-            console.error('Error fetching products:', error);
-        } else {
-            setProducts(data || []);
-        }
-        setLoading(false);
-    }
 
     const filteredProducts = filter === "All Products" 
-        ? products 
-        : products.filter(p => p.category === filter);
+        ? STATIC_PRODUCTS 
+        : STATIC_PRODUCTS.filter(p => p.category === filter);
 
     const categories = [
         "All Products", 
@@ -201,29 +223,25 @@ export default function Products() {
                         )}
                     </div>
 
-                    {loading ? (
-                        <div style={{ textAlign: 'center', padding: '5rem', color: 'var(--color-text-muted)' }}>Syncing secure catalog data...</div>
-                    ) : (
-                        <div className="l-grid l-grid--4" id="product-grid">
-                            {filteredProducts.map(product => (
-                                <div key={product.id} className="product-card" data-reveal="fade-in">
-                                    <div className="product-image">
-                                        <img src={product.image_url || "/bearings-hero.png"} alt={product.title} />
-                                    </div>
-                                    <h3 className="product-name">{product.title}</h3>
-                                    <span style={{ display: 'block', margin: '0 1.75rem 1rem', fontSize: '0.75rem', color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                                        {product.category}
-                                    </span>
-                                    <a href={`/contact?product=${encodeURIComponent(product.title)}`} className="product-link">Inquire Now &rarr;</a>
+                    <div className="l-grid l-grid--4" id="product-grid">
+                        {filteredProducts.map(product => (
+                            <div key={product.id} className="product-card" data-reveal="fade-in">
+                                <div className="product-image">
+                                    <img src={product.image_url || "/bearings-hero.png"} alt={product.title} />
                                 </div>
-                            ))}
-                            {filteredProducts.length === 0 && (
-                                <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '4rem', color: 'var(--color-text-muted)' }}>
-                                    No products found in this category.
-                                </div>
-                            )}
-                        </div>
-                    )}
+                                <h3 className="product-name">{product.title}</h3>
+                                <span style={{ display: 'block', margin: '0 1.75rem 1rem', fontSize: '0.75rem', color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                                    {product.category}
+                                </span>
+                                <a href={`/contact?product=${encodeURIComponent(product.title)}`} className="product-link">Inquire Now &rarr;</a>
+                            </div>
+                        ))}
+                        {filteredProducts.length === 0 && (
+                            <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '4rem', color: 'var(--color-text-muted)' }}>
+                                No products found in this category.
+                            </div>
+                        )}
+                    </div>
                 </div>
             </section>
         </div>

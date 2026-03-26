@@ -1,30 +1,102 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import { supabase } from "@/lib/supabase";
+import { useState } from "react";
 
 interface Product {
-  id: string;
-  title: string;
-  category: string;
-  image_url: string;
+    id: string;
+    title: string;
+    category: string;
+    image_url: string;
+    description: string;
+    price: number | null;
 }
 
+const categoryDetails: Record<string, { description: string; items?: string[]; dealers?: string[]; stockists?: string[] }> = {
+    "All Products": {
+        description: "Direct-from-manufacturer supply chain for high-precision industrial components."
+    },
+    "Bearings": {
+        description: "High-load precision ball and roller bearings for global mechanical excellence.",
+        items: [
+            "Deep Grove Ball Bearings",
+            "Miniature Bearings",
+            "Cylindrical Roller Bearings",
+            "Needle Roller Bearings",
+            "Angular Roller Bearings",
+            "Pillow Block/ Plummer Block Housings"
+        ],
+        dealers: ["SKF", "FAG", "TATA", "NRB", "VAIB", "CSG"],
+        stockists: ["NBC", "ARB", "TIMKEN", "LINCOLN", "NMB"]
+    },
+    "Transmission & Motion": {
+        description: "Durable power transmission and mechanical motion control systems.",
+        items: [
+            "V-Belt", 
+            "Timing Belts",
+            "Roller and Conveyer Chains",
+            "Shaft Couplings"
+        ]
+    },
+    "Sealing & Fluid Control": {
+        description: "Industrial sealing solutions and fluid management infrastructure.",
+        items: [
+            "O-Rings",
+            "Gaskets",
+            "Mechanical Seals",
+            "Hydraulic Fittings"
+        ]
+    },
+    "Fasteners & Fixings": {
+        description: "High-tensile precision fasteners for structural integrity.",
+        items: [
+            "Bolts, Nuts and Washers",
+            "Threaded inserts and studs",
+            "Spring Pins",
+            "Circlips"
+        ]
+    },
+    "Electrical & Wiring": {
+        description: "Professional electrical connection and air fitting components.",
+        items: [
+            "Terminals and connectors", 
+            "Circuit Breakers",
+            "Air Fittings", 
+            "Tubings"
+        ]
+    },
+    "MRO Consumables": {
+        description: "Essential maintenance, repair, and operation supplies.",
+        items: [
+            "Cutting Tools", 
+            "Drills",
+            "Lubricants and Grease"
+        ]
+    },
+    "Automotives & Engine": {
+        description: "Precision-engineered components for advanced engine systems.",
+        items: [
+            "Pump impellers",
+            "All types of seals",
+            "Valve Guides and Tappets",
+            "Piston Rings and Liners",
+            "Bearings - All Types"
+        ]
+    }
+};
+
+import Link from "next/link";
+
+const FEATURED_PRODUCTS = [
+  { id: 'b1', title: 'Deep Grove Ball Bearings', category: 'Bearings', image_url: 'https://images.unsplash.com/photo-1594814136440-d4b3506450f3?auto=format&fit=crop&q=80&w=400' },
+  { id: 'b3', title: 'Cylindrical Roller Bearings', category: 'Bearings', image_url: 'https://images.unsplash.com/photo-159742324403d-d556d0bd1c9c?auto=format&fit=crop&q=80&w=400' },
+  { id: 't1', title: 'Heavy Duty V-Belt', category: 'Transmission & Motion', image_url: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=400' },
+  { id: 'e3', title: 'Pneumatic Air Fittings', category: 'Electrical & Wiring', image_url: 'https://images.unsplash.com/photo-1581092162384-8987ec176471?auto=format&fit=crop&q=80&w=400' },
+];
+
+
+
 export default function Home() {
-  const [featuredProducts, setFeaturedProducts] = useState<Product[]>([]);
-
-  useEffect(() => {
-    fetchFeatured();
-  }, []);
-
-  async function fetchFeatured() {
-    const { data } = await supabase
-      .from('products')
-      .select('*')
-      .limit(8);
-    if (data) setFeaturedProducts(data);
-  }
+  const featuredProducts = FEATURED_PRODUCTS;
 
   return (
     <div className="home-page">
@@ -133,42 +205,36 @@ export default function Home() {
         <div className="l-container">
           <div className="card-corp" data-reveal="fade-in" style={{ textAlign: 'center', borderTop: '3px solid var(--color-primary)' }}>
             <h2 className="corp-h2" style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Authorised Dealerships & Strategic Stock</h2>
-            <p style={{ marginBottom: '2rem', color: 'var(--color-text-main)', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
+            <p style={{ marginBottom: '2.5rem', color: 'var(--color-text-main)', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
               We represent global standards of quality through our strategic partnerships. We are proud **Authorised Dealers** and specialized **Stockists** of world-renowned manufacturing brands.
             </p>
             
-            <div className="marquee-wrapper">
-              <div className="marquee-content">
-                <span style={{ fontWeight: 400, fontSize: '0.8rem', color: 'var(--color-text-muted)', textTransform: 'uppercase' }}>Authorised Dealers:</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>SKF</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>FAG</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>TATA</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>NRB</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>VAIB</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>CSG</span>
-                
-                <span style={{ fontWeight: 400, fontSize: '0.8rem', color: 'var(--color-text-muted)', textTransform: 'uppercase', marginLeft: '2rem' }}>Stockists:</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>NBC</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>ARB</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>TIMKEN</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>LINCOLN</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>NMB</span>
+            <div className="brands-vertical-layout" style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+              {/* Authorised Dealers - Top Row */}
+              <div className="brands-row">
+                <span style={{ display: 'block', fontWeight: 700, fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--color-text-muted)', marginBottom: '1.5rem', letterSpacing: '0.1em' }}>Authorised Dealers:</span>
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '3rem', alignItems: 'center' }}>
+                  <span style={{ fontWeight: 800, fontSize: '1.75rem', color: 'var(--color-primary-dark)' }}>SKF</span>
+                  <span style={{ fontWeight: 800, fontSize: '1.75rem', color: 'var(--color-primary-dark)' }}>FAG</span>
+                  <span style={{ fontWeight: 800, fontSize: '1.75rem', color: 'var(--color-primary-dark)' }}>TATA</span>
+                  <span style={{ fontWeight: 800, fontSize: '1.75rem', color: 'var(--color-primary-dark)' }}>NRB</span>
+                  <span style={{ fontWeight: 800, fontSize: '1.75rem', color: 'var(--color-primary-dark)' }}>VAIB</span>
+                  <span style={{ fontWeight: 800, fontSize: '1.75rem', color: 'var(--color-primary-dark)' }}>CSG</span>
+                </div>
+              </div>
 
-                {/* Duplicate Set for infinite scroll */}
-                <span style={{ fontWeight: 400, fontSize: '0.8rem', color: 'var(--color-text-muted)', textTransform: 'uppercase', marginLeft: '2rem' }}>Authorised Dealers:</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>SKF</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>FAG</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>TATA</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>NRB</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>VAIB</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>CSG</span>
-                
-                <span style={{ fontWeight: 400, fontSize: '0.8rem', color: 'var(--color-text-muted)', textTransform: 'uppercase', marginLeft: '2rem' }}>Stockists:</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>NBC</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>ARB</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>TIMKEN</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>LINCOLN</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>NMB</span>
+              <div style={{ height: '1px', background: 'var(--color-border)', width: '60px', margin: '0 auto' }}></div>
+
+              {/* Stockists - Bottom Row */}
+              <div className="brands-row">
+                <span style={{ display: 'block', fontWeight: 700, fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--color-text-muted)', marginBottom: '1.5rem', letterSpacing: '0.1em' }}>Strategic Stockists:</span>
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2.5rem', alignItems: 'center', opacity: 0.8 }}>
+                  <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary)' }}>NBC</span>
+                  <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary)' }}>ARB</span>
+                  <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary)' }}>TIMKEN</span>
+                  <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary)' }}>LINCOLN</span>
+                  <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary)' }}>NMB</span>
+                </div>
               </div>
             </div>
           </div>
@@ -183,28 +249,22 @@ export default function Home() {
         
         <div className="product-marquee-wrapper" data-reveal="fade-in">
           <div className="product-marquee">
-            {featuredProducts.length > 0 ? (
-              <>
-                {/* Original Set */}
-                {featuredProducts.map(p => (
-                  <div className="product-card" key={p.id}>
-                    <div className="product-image"><img src={p.image_url || "/bearings-hero.png"} alt={p.title} /></div>
-                    <h3 className="product-name">{p.title}</h3>
-                    <Link href="/products" className="product-link">Explore Specifications &rarr;</Link>
-                  </div>
-                ))}
-                {/* Duplicate Set for infinite scroll */}
-                {featuredProducts.map(p => (
-                  <div className="product-card" key={`dup-${p.id}`}>
-                    <div className="product-image"><img src={p.image_url || "/bearings-hero.png"} alt={p.title} /></div>
-                    <h3 className="product-name">{p.title}</h3>
-                    <Link href="/products" className="product-link">Explore Specifications &rarr;</Link>
-                  </div>
-                ))}
-              </>
-            ) : (
-                <div style={{ padding: '2rem', textAlign: 'center', width: '100%', color: 'var(--color-text-muted)' }}>Initialising live catalog...</div>
-            )}
+            {/* Original Set */}
+            {featuredProducts.map(p => (
+              <div className="product-card" key={p.id}>
+                <div className="product-image"><img src={p.image_url || "/bearings-hero.png"} alt={p.title} /></div>
+                <h3 className="product-name">{p.title}</h3>
+                <Link href="/products" className="product-link">Explore Specifications &rarr;</Link>
+              </div>
+            ))}
+            {/* Duplicate Set for infinite scroll */}
+            {featuredProducts.map(p => (
+              <div className="product-card" key={`dup-${p.id}`}>
+                <div className="product-image"><img src={p.image_url || "/bearings-hero.png"} alt={p.title} /></div>
+                <h3 className="product-name">{p.title}</h3>
+                <Link href="/products" className="product-link">Explore Specifications &rarr;</Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>
