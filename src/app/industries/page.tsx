@@ -7,8 +7,8 @@ export default function Industries() {
       <section className="banner-corp" style={{ backgroundColor: 'var(--color-primary-dark)', color: '#fff', padding: '8rem 0 4rem', textAlign: 'center' }}>
         <div className="l-container">
           <div className="banner-corp__content" data-reveal="fade-in">
-            <h1 className="banner-corp__title" style={{ fontSize: '3rem', marginBottom: '1rem', color: '#fff' }}>Specialized Bearing Solutions</h1>
-            <p className="banner-corp__lead" style={{ fontSize: '1.125rem', maxWidth: '600px', margin: '0 auto', opacity: 0.8 }}>Expertise in importing and distributing high-precision ball and roller bearings across critical industrial sectors.</p>
+            <h1 className="banner-corp__title" style={{ fontSize: '3rem', marginBottom: '1rem', color: '#fff' }}>Specialized Industrial Solutions</h1>
+            <p className="banner-corp__lead" style={{ fontSize: '1.125rem', maxWidth: '600px', margin: '0 auto', opacity: 0.8 }}>Expertise in importing and distributing high-precision mechanical components across critical industrial sectors.</p>
           </div>
         </div>
       </section>

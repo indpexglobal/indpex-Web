@@ -38,13 +38,13 @@ export default function Home() {
         </div>
         <div className="l-container">
           <div className="hero-corp__content">
-            <h1 className="hero-corp__title">Precision Bearings. <br />Industrial Strength.</h1>
+            <h1 className="hero-corp__title">Direct-from-Manufacturer <br />Industrial Components</h1>
             <p className="hero-corp__lead">
-              Indpex Global is a specialized importer and distributor of high-performance ball bearings and industrial components. Premium sourcing for global mechanical excellence since 2011.
+              20–40% below market price, pre-shipment inspection, IEC-registered Indian exporter. Specialized supply for GCC, Africa, and Europe.
             </p>
             <div className="hero-corp__actions">
-              <Link href="/products" className="btn btn--primary">Browse Catalog</Link>
-              <Link href="/contact" className="btn btn--outline" style={{ color: '#fff', borderColor: '#fff' }}>Request Quote</Link>
+              <Link href="/products" className="btn btn--primary">Browse Components</Link>
+              <Link href="/contact" className="btn btn--outline" style={{ color: '#fff', borderColor: '#fff' }}>Technical Inquiry</Link>
             </div>
           </div>
         </div>
@@ -142,10 +142,13 @@ export default function Home() {
                 <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>SKF</span>
                 <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>TATA</span>
                 <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>FAG</span>
+                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>NRB</span>
+                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>NMB</span>
+                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>NBC</span>
+                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>TIMKEN</span>
+                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>ARB</span>
                 <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>VAIB</span>
                 <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>CSG</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>NRB</span>
-                <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>NBC (Stockist)</span>
                 
                 <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>SKF</span>
                 <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary-dark)' }}>TATA</span>

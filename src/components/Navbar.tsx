@@ -20,6 +20,7 @@ const Navbar = () => {
             <nav className="nav-corp">
                 <div className="l-container nav-corp__flex">
                     <Link href="/" className="nav-corp__logo">
+                        <span className="logo-icon">IG</span>
                         INDPEX <span className="logo-accent">GLOBAL</span>
                     </Link>
                     
