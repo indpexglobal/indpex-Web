@@ -11,6 +11,16 @@ interface Product {
     price: number | null;
 }
 
+const CERTIFICATES = [
+  { id: 'skf', title: 'SKF India', sub: 'Authorised Industrial Distributor 2024', img: '/certificates/skf-2024.png' },
+  { id: 'tata', title: 'TATA Bearings', sub: 'Authorised Stockist', img: '/certificates/tata-stockist.png' },
+  { id: 'nrb', title: 'NRB Bearings', sub: 'Authorised Distributor', img: '/certificates/nrb-distributor.png' },
+  { id: 'schaeffler', title: 'Schaeffler', sub: 'Official Authorised Partner', img: '/certificates/schaeffler-auth.png' },
+  { id: 'biwheeler', title: 'Bi-Wheeler Association', sub: 'Registered Member', img: '/certificates/bi-wheeler-member.png' },
+  { id: 'rajasthan', title: 'Rajasthan Auto Parts', sub: 'Registered Member', img: '/certificates/rajasthan-member.png' },
+];
+
+
 const categoryDetails: Record<string, { description: string; items?: string[]; dealers?: string[]; stockists?: string[] }> = {
     "All Products": {
         description: "Direct-from-manufacturer supply chain for high-precision industrial components."
@@ -97,9 +107,21 @@ const FEATURED_PRODUCTS = [
 
 export default function Home() {
   const featuredProducts = FEATURED_PRODUCTS;
+  const [selectedCert, setSelectedCert] = useState<typeof CERTIFICATES[0] | null>(null);
 
   return (
     <div className="home-page">
+      {/* Lightbox Modal */}
+      {selectedCert && (
+        <div className="modal-overlay" onClick={() => setSelectedCert(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setSelectedCert(null)}>&times;</button>
+            <img src={selectedCert.img} alt={selectedCert.title} />
+            <div className="modal-title">{selectedCert.title} - {selectedCert.sub}</div>
+          </div>
+        </div>
+      )}
+
       {/* Corporate Hero Section */}
       <section className="hero-corp" style={{ paddingTop: '140px' }}>
         <div className="hero-corp__video-wrap">
@@ -240,6 +262,40 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Trust & Certifications Section */}
+      <section className="cert-section">
+        <div className="l-container">
+          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+            <h2 className="editorial-title" style={{ fontSize: '2.5rem', marginBottom: '1rem' }} data-reveal="slide-up">Our Certifications <br />& Authorizations</h2>
+            <p style={{ color: 'var(--color-text-muted)', maxWidth: '600px', margin: '0 auto' }}>
+              Verification of our authorized status and industry memberships, ensuring genuine supply and technical compliance.
+            </p>
+          </div>
+
+          <div className="cert-grid">
+            {CERTIFICATES.map((cert) => (
+              <div 
+                className="cert-card" 
+                key={cert.id} 
+                data-reveal="fade-in"
+                onClick={() => setSelectedCert(cert)}
+              >
+                <div className="cert-image">
+                  <img src={cert.img} alt={cert.title} />
+                  <div className="cert-view-btn">View Certificate</div>
+                </div>
+                <div className="cert-info">
+                  <span className="cert-badge">Official Document</span>
+                  <h3 className="cert-name">{cert.title}</h3>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', marginTop: '0.25rem' }}>{cert.sub}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* Product Showcase Carousel (Dynamic) */}
       <section id="products" className="l-section l-section--bg" style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
