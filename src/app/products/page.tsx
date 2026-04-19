@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import ProductGrid from "@/components/ProductGrid";
+import productData from "@/data/products.json";
 
 interface Product {
     id: string;
@@ -223,24 +225,8 @@ export default function Products() {
                         )}
                     </div>
 
-                    <div className="l-grid l-grid--4" id="product-grid">
-                        {filteredProducts.map(product => (
-                            <div key={product.id} className="product-card" data-reveal="fade-in">
-                                <div className="product-image">
-                                    <img src={product.image_url || "/bearings-hero.png"} alt={product.title} />
-                                </div>
-                                <h3 className="product-name">{product.title}</h3>
-                                <span style={{ display: 'block', margin: '0 1.75rem 1rem', fontSize: '0.75rem', color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                                    {product.category}
-                                </span>
-                                <a href={`/contact?product=${encodeURIComponent(product.title)}`} className="product-link">Inquire Now &rarr;</a>
-                            </div>
-                        ))}
-                        {filteredProducts.length === 0 && (
-                            <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '4rem', color: 'var(--color-text-muted)' }}>
-                                No products found in this category.
-                            </div>
-                        )}
+                    <div style={{ marginTop: '4rem' }}>
+                        <ProductGrid products={productData} />
                     </div>
                 </div>
             </section>

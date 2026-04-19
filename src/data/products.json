@@ -1,0 +1,58 @@
+[
+  {
+    "id": "skf-6204",
+    "name": "SKF 6204 Deep Groove Ball Bearing",
+    "brand": "SKF",
+    "specs": "Dynamic Load: 13.5kN | Static Load: 6.55kN | Speed: 17000 r/min. Premium stainless construction.",
+    "description": "High-speed precision engineered for industrial electric motors. Ensures zero-friction rotational stability under load.",
+    "local_image": "/images/products/skf-6204-bearing.jpg"
+  },
+  {
+    "id": "fag-7305",
+    "name": "FAG 7305 Angular Contact Bearing",
+    "brand": "FAG / Schaeffler",
+    "specs": "Dynamic Load: 28.5kN | Contact Angle: 40°. Universal matching capability.",
+    "description": "Engineered for axial and radial loads in high-velocity spindle applications. Features optimized cage geometry.",
+    "local_image": "/images/products/fag-angular-contact.jpg"
+  },
+  {
+    "id": "skf-22210",
+    "name": "SKF 22210 Spherical Roller Bearing",
+    "brand": "SKF",
+    "specs": "Dynamic Load: 104kN | Explorer class. Open design for severe applications.",
+    "description": "Self-aligning powerhouse designed to accommodate heavy radial and impact loads in mining and aggregate processing.",
+    "local_image": "/images/products/skf-spherical-roller.jpg"
+  },
+  {
+    "id": "nbc-32212",
+    "name": "NBC 32212 Tapered Roller Bearing",
+    "brand": "NBC",
+    "specs": "Dynamic Load: 140kN | Bore: 60mm | OD: 110mm. Single-row construction.",
+    "description": "Exceptional rigidity for heavy-duty automotive transmissions. Maintains precise shaft alignment under maximum stress.",
+    "local_image": "/images/products/nbc-tapered-roller.jpg"
+  },
+  {
+    "id": "timken-nu210",
+    "name": "Timken NU210 Cylindrical Roller",
+    "brand": "Timken",
+    "specs": "Dynamic Load: 69kN | Non-locating bearing type. High speed tolerance.",
+    "description": "Optimized roller-end profiling minimizes stress concentrations, delivering unmatched longevity in industrial gearboxes.",
+    "local_image": "/images/products/timken-cylindrical.jpg"
+  },
+  {
+    "id": "skf-51110",
+    "name": "SKF 51110 Thrust Ball Bearing",
+    "brand": "SKF",
+    "specs": "Dynamic Load: 26kN | Static Load: 50kN. Single direction.",
+    "description": "Precision thrust plate and caged ball assembly designed to manage extreme axial compression forces smoothly.",
+    "local_image": "/images/products/skf-thrust-bearing.jpg"
+  },
+  {
+    "id": "ntn-ucp206",
+    "name": "NTN UCP206 Pillow Block Bearing",
+    "brand": "NTN",
+    "specs": "Bore: 30mm | Cast iron housing. Set screw locking mechanism.",
+    "description": "Ready-to-mount bearing unit offering robust shaft support and self-alignment capabilities for industrial conveyors.",
+    "local_image": "/images/products/ntn-pillow-block.jpg"
+  }
+]
