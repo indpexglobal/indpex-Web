@@ -12,12 +12,17 @@ interface Product {
 }
 
 const CERTIFICATES = [
-  { id: 'skf', title: 'SKF India', sub: 'Authorised Industrial Distributor 2024', img: '/certificates/skf-2024.png' },
-  { id: 'tata', title: 'TATA Bearings', sub: 'Authorised Stockist', img: '/certificates/tata-stockist.png' },
-  { id: 'nrb', title: 'NRB Bearings', sub: 'Authorised Distributor', img: '/certificates/nrb-distributor.png' },
-  { id: 'schaeffler', title: 'Schaeffler', sub: 'Official Authorised Partner', img: '/certificates/schaeffler-auth.png' },
-  { id: 'biwheeler', title: 'Bi-Wheeler Association', sub: 'Registered Member', img: '/certificates/bi-wheeler-member.png' },
-  { id: 'rajasthan', title: 'Rajasthan Auto Parts', sub: 'Registered Member', img: '/certificates/rajasthan-member.png' },
+  { id: 'skf-2024', title: 'SKF India', sub: 'Authorised Industrial Distributor 2024', img: '/certificates/skf-auth-2024.jpg' },
+  { id: 'tata-2024', title: 'TATA Bearings', sub: 'Authorised Stockist 2024-25', img: '/certificates/tata-auth-2024.jpg' },
+  { id: 'nrb-2023', title: 'NRB Bearings', sub: 'Authorised Distributor 2023-24', img: '/certificates/nrb-auth-2023.jpg' },
+  { id: 'nrb-ind-2023', title: 'NRB Bearings', sub: 'Authorised Industrial Distributor', img: '/certificates/nrb-industrial-2023.jpg' },
+  { id: 'ravm-v', title: 'RAVM', sub: 'Membership Certificate (Vaibhav)', img: '/certificates/ravm-member-vaibhav.jpg' },
+  { id: 'nrb-2022', title: 'NRB Bearings', sub: 'Authorised Distributor 2022-23', img: '/certificates/nrb-auth-2022.jpg' },
+  { id: 'auto-2022', title: 'Auto Carnival', sub: 'Participation Certificate 2022', img: '/certificates/auto-carnival-2022.jpg' },
+  { id: 'schaeffler', title: 'Schaeffler', sub: 'Official Authorised Partner', img: '/certificates/schaeffler-auth-2020.jpg' },
+  { id: 'skf-2021', title: 'SKF India', sub: 'Authorised Distributor 2021', img: '/certificates/skf-auth-2021.jpg' },
+  { id: 'tata-2017', title: 'TATA Bearings', sub: 'Authorised Stockist 2017', img: '/certificates/tata-auth-2017.jpg' },
+  { id: 'ravm-h', title: 'RAVM', sub: 'Membership Certificate (Himanshu)', img: '/certificates/ravm-member-himanshu.jpg' },
 ];
 
 
@@ -114,9 +119,11 @@ export default function Home() {
       {/* Lightbox Modal */}
       {selectedCert && (
         <div className="modal-overlay" onClick={() => setSelectedCert(null)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+          <div className="modal-content museum-frame" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={() => setSelectedCert(null)}>&times;</button>
-            <img src={selectedCert.img} alt={selectedCert.title} />
+            <div className="museum-inner">
+               <img src={selectedCert.img} alt={selectedCert.title} className="museum-img" />
+            </div>
             <div className="modal-title">{selectedCert.title} - {selectedCert.sub}</div>
           </div>
         </div>
@@ -276,19 +283,19 @@ export default function Home() {
           <div className="cert-grid">
             {CERTIFICATES.map((cert) => (
               <div 
-                className="cert-card" 
+                className="cert-card certificate-plaque" 
                 key={cert.id} 
                 data-reveal="fade-in"
                 onClick={() => setSelectedCert(cert)}
               >
                 <div className="cert-image">
                   <img src={cert.img} alt={cert.title} />
-                  <div className="cert-view-btn">View Certificate</div>
+                  <div className="cert-view-btn">Inspect Original</div>
                 </div>
                 <div className="cert-info">
-                  <span className="cert-badge">Official Document</span>
+                  <span className="cert-badge">Verified Credential</span>
                   <h3 className="cert-name">{cert.title}</h3>
-                  <p style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', marginTop: '0.25rem' }}>{cert.sub}</p>
+                  <p className="cert-subtitle">{cert.sub}</p>
                 </div>
               </div>
             ))}
