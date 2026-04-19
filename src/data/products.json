@@ -1,58 +1,242 @@
 [
   {
-    "id": "skf-6204",
-    "name": "SKF 6204 Deep Groove Ball Bearing",
-    "brand": "SKF",
-    "specs": "Dynamic Load: 13.5kN | Static Load: 6.55kN | Speed: 17000 r/min. Premium stainless construction.",
-    "description": "High-speed precision engineered for industrial electric motors. Ensures zero-friction rotational stability under load.",
-    "local_image": "/images/products/skf-6204-bearing.jpg"
-  },
-  {
-    "id": "fag-7305",
-    "name": "FAG 7305 Angular Contact Bearing",
-    "brand": "FAG / Schaeffler",
-    "specs": "Dynamic Load: 28.5kN | Contact Angle: 40°. Universal matching capability.",
-    "description": "Engineered for axial and radial loads in high-velocity spindle applications. Features optimized cage geometry.",
-    "local_image": "/images/products/fag-angular-contact.jpg"
-  },
-  {
-    "id": "skf-22210",
-    "name": "SKF 22210 Spherical Roller Bearing",
-    "brand": "SKF",
-    "specs": "Dynamic Load: 104kN | Explorer class. Open design for severe applications.",
-    "description": "Self-aligning powerhouse designed to accommodate heavy radial and impact loads in mining and aggregate processing.",
-    "local_image": "/images/products/skf-spherical-roller.jpg"
-  },
-  {
-    "id": "nbc-32212",
-    "name": "NBC 32212 Tapered Roller Bearing",
-    "brand": "NBC",
-    "specs": "Dynamic Load: 140kN | Bore: 60mm | OD: 110mm. Single-row construction.",
+    "id": "mock-1",
+    "name": "Timken 8362 Tapered Roller Bearing",
+    "brand": "Timken",
+    "specs": "Dynamic Load: 149kN | Bore: 24mm. Industrial Grade.",
     "description": "Exceptional rigidity for heavy-duty automotive transmissions. Maintains precise shaft alignment under maximum stress.",
     "local_image": "/images/products/nbc-tapered-roller.jpg"
   },
   {
-    "id": "timken-nu210",
-    "name": "Timken NU210 Cylindrical Roller",
-    "brand": "Timken",
-    "specs": "Dynamic Load: 69kN | Non-locating bearing type. High speed tolerance.",
-    "description": "Optimized roller-end profiling minimizes stress concentrations, delivering unmatched longevity in industrial gearboxes.",
-    "local_image": "/images/products/timken-cylindrical.jpg"
+    "id": "mock-2",
+    "name": "NBC 3399 Tapered Roller Bearing",
+    "brand": "NBC",
+    "specs": "Dynamic Load: 152kN | Bore: 54mm. Industrial Grade.",
+    "description": "Exceptional rigidity for heavy-duty automotive transmissions. Maintains precise shaft alignment under maximum stress.",
+    "local_image": "/images/products/nbc-tapered-roller.jpg"
   },
   {
-    "id": "skf-51110",
-    "name": "SKF 51110 Thrust Ball Bearing",
-    "brand": "SKF",
-    "specs": "Dynamic Load: 26kN | Static Load: 50kN. Single direction.",
+    "id": "mock-3",
+    "name": "FAG / Schaeffler 2167 Deep Groove Ball Bearing",
+    "brand": "FAG / Schaeffler",
+    "specs": "Dynamic Load: 39kN | Bore: 24mm. Industrial Grade.",
+    "description": "High-speed precision engineered for industrial electric motors. Ensures zero-friction rotational stability under load.",
+    "local_image": "/images/products/skf-6204-bearing.jpg"
+  },
+  {
+    "id": "mock-4",
+    "name": "FAG / Schaeffler 5791 Thrust Ball Bearing",
+    "brand": "FAG / Schaeffler",
+    "specs": "Dynamic Load: 28kN | Bore: 24mm. Industrial Grade.",
     "description": "Precision thrust plate and caged ball assembly designed to manage extreme axial compression forces smoothly.",
     "local_image": "/images/products/skf-thrust-bearing.jpg"
   },
   {
-    "id": "ntn-ucp206",
-    "name": "NTN UCP206 Pillow Block Bearing",
+    "id": "mock-5",
+    "name": "FAG / Schaeffler 5123 Thrust Ball Bearing",
+    "brand": "FAG / Schaeffler",
+    "specs": "Dynamic Load: 29kN | Bore: 44mm. Industrial Grade.",
+    "description": "Precision thrust plate and caged ball assembly designed to manage extreme axial compression forces smoothly.",
+    "local_image": "/images/products/skf-thrust-bearing.jpg"
+  },
+  {
+    "id": "mock-6",
+    "name": "NBC 9513 Cylindrical Roller",
+    "brand": "NBC",
+    "specs": "Dynamic Load: 79kN | Bore: 30mm. Industrial Grade.",
+    "description": "Optimized roller-end profiling minimizes stress concentrations, delivering unmatched longevity in industrial gearboxes.",
+    "local_image": "/images/products/timken-cylindrical.jpg"
+  },
+  {
+    "id": "mock-7",
+    "name": "Timken 3740 Cylindrical Roller",
+    "brand": "Timken",
+    "specs": "Dynamic Load: 94kN | Bore: 32mm. Industrial Grade.",
+    "description": "Optimized roller-end profiling minimizes stress concentrations, delivering unmatched longevity in industrial gearboxes.",
+    "local_image": "/images/products/timken-cylindrical.jpg"
+  },
+  {
+    "id": "mock-8",
+    "name": "NTN 7141 Tapered Roller Bearing",
     "brand": "NTN",
-    "specs": "Bore: 30mm | Cast iron housing. Set screw locking mechanism.",
+    "specs": "Dynamic Load: 158kN | Bore: 47mm. Industrial Grade.",
+    "description": "Exceptional rigidity for heavy-duty automotive transmissions. Maintains precise shaft alignment under maximum stress.",
+    "local_image": "/images/products/nbc-tapered-roller.jpg"
+  },
+  {
+    "id": "mock-9",
+    "name": "FAG / Schaeffler 3001 Tapered Roller Bearing",
+    "brand": "FAG / Schaeffler",
+    "specs": "Dynamic Load: 127kN | Bore: 18mm. Industrial Grade.",
+    "description": "Exceptional rigidity for heavy-duty automotive transmissions. Maintains precise shaft alignment under maximum stress.",
+    "local_image": "/images/products/nbc-tapered-roller.jpg"
+  },
+  {
+    "id": "mock-10",
+    "name": "Timken 2377 Pillow Block Unit",
+    "brand": "Timken",
+    "specs": "Dynamic Load: 25kN | Bore: 52mm. Industrial Grade.",
     "description": "Ready-to-mount bearing unit offering robust shaft support and self-alignment capabilities for industrial conveyors.",
     "local_image": "/images/products/ntn-pillow-block.jpg"
+  },
+  {
+    "id": "mock-11",
+    "name": "Timken 7250 Angular Contact Bearing",
+    "brand": "Timken",
+    "specs": "Dynamic Load: 42kN | Bore: 43mm. Industrial Grade.",
+    "description": "Engineered for axial and radial loads in high-velocity spindle applications. Features optimized cage geometry.",
+    "local_image": "/images/products/fag-angular-contact.jpg"
+  },
+  {
+    "id": "mock-12",
+    "name": "NBC 5401 Tapered Roller Bearing",
+    "brand": "NBC",
+    "specs": "Dynamic Load: 138kN | Bore: 46mm. Industrial Grade.",
+    "description": "Exceptional rigidity for heavy-duty automotive transmissions. Maintains precise shaft alignment under maximum stress.",
+    "local_image": "/images/products/nbc-tapered-roller.jpg"
+  },
+  {
+    "id": "mock-13",
+    "name": "FAG / Schaeffler 1579 Tapered Roller Bearing",
+    "brand": "FAG / Schaeffler",
+    "specs": "Dynamic Load: 124kN | Bore: 22mm. Industrial Grade.",
+    "description": "Exceptional rigidity for heavy-duty automotive transmissions. Maintains precise shaft alignment under maximum stress.",
+    "local_image": "/images/products/nbc-tapered-roller.jpg"
+  },
+  {
+    "id": "mock-14",
+    "name": "SKF 5951 Thrust Ball Bearing",
+    "brand": "SKF",
+    "specs": "Dynamic Load: 48kN | Bore: 21mm. Industrial Grade.",
+    "description": "Precision thrust plate and caged ball assembly designed to manage extreme axial compression forces smoothly.",
+    "local_image": "/images/products/skf-thrust-bearing.jpg"
+  },
+  {
+    "id": "mock-15",
+    "name": "FAG / Schaeffler 6236 Cylindrical Roller",
+    "brand": "FAG / Schaeffler",
+    "specs": "Dynamic Load: 60kN | Bore: 15mm. Industrial Grade.",
+    "description": "Optimized roller-end profiling minimizes stress concentrations, delivering unmatched longevity in industrial gearboxes.",
+    "local_image": "/images/products/timken-cylindrical.jpg"
+  },
+  {
+    "id": "mock-16",
+    "name": "NTN 2519 Angular Contact Bearing",
+    "brand": "NTN",
+    "specs": "Dynamic Load: 44kN | Bore: 35mm. Industrial Grade.",
+    "description": "Engineered for axial and radial loads in high-velocity spindle applications. Features optimized cage geometry.",
+    "local_image": "/images/products/fag-angular-contact.jpg"
+  },
+  {
+    "id": "mock-17",
+    "name": "Timken 4677 Deep Groove Ball Bearing",
+    "brand": "Timken",
+    "specs": "Dynamic Load: 14kN | Bore: 22mm. Industrial Grade.",
+    "description": "High-speed precision engineered for industrial electric motors. Ensures zero-friction rotational stability under load.",
+    "local_image": "/images/products/skf-6204-bearing.jpg"
+  },
+  {
+    "id": "mock-18",
+    "name": "NTN 7434 Pillow Block Unit",
+    "brand": "NTN",
+    "specs": "Dynamic Load: 43kN | Bore: 42mm. Industrial Grade.",
+    "description": "Ready-to-mount bearing unit offering robust shaft support and self-alignment capabilities for industrial conveyors.",
+    "local_image": "/images/products/ntn-pillow-block.jpg"
+  },
+  {
+    "id": "mock-19",
+    "name": "NBC 8061 Tapered Roller Bearing",
+    "brand": "NBC",
+    "specs": "Dynamic Load: 144kN | Bore: 50mm. Industrial Grade.",
+    "description": "Exceptional rigidity for heavy-duty automotive transmissions. Maintains precise shaft alignment under maximum stress.",
+    "local_image": "/images/products/nbc-tapered-roller.jpg"
+  },
+  {
+    "id": "mock-20",
+    "name": "Timken 9440 Spherical Roller Bearing",
+    "brand": "Timken",
+    "specs": "Dynamic Load: 104kN | Bore: 17mm. Industrial Grade.",
+    "description": "Self-aligning powerhouse designed to accommodate heavy radial and impact loads in mining and aggregate processing.",
+    "local_image": "/images/products/skf-spherical-roller.jpg"
+  },
+  {
+    "id": "mock-21",
+    "name": "FAG / Schaeffler 2687 Thrust Ball Bearing",
+    "brand": "FAG / Schaeffler",
+    "specs": "Dynamic Load: 27kN | Bore: 22mm. Industrial Grade.",
+    "description": "Precision thrust plate and caged ball assembly designed to manage extreme axial compression forces smoothly.",
+    "local_image": "/images/products/skf-thrust-bearing.jpg"
+  },
+  {
+    "id": "mock-22",
+    "name": "NBC 4532 Deep Groove Ball Bearing",
+    "brand": "NBC",
+    "specs": "Dynamic Load: 38kN | Bore: 53mm. Industrial Grade.",
+    "description": "High-speed precision engineered for industrial electric motors. Ensures zero-friction rotational stability under load.",
+    "local_image": "/images/products/skf-6204-bearing.jpg"
+  },
+  {
+    "id": "mock-23",
+    "name": "NBC 3367 Pillow Block Unit",
+    "brand": "NBC",
+    "specs": "Dynamic Load: 24kN | Bore: 26mm. Industrial Grade.",
+    "description": "Ready-to-mount bearing unit offering robust shaft support and self-alignment capabilities for industrial conveyors.",
+    "local_image": "/images/products/ntn-pillow-block.jpg"
+  },
+  {
+    "id": "mock-24",
+    "name": "FAG / Schaeffler 1477 Angular Contact Bearing",
+    "brand": "FAG / Schaeffler",
+    "specs": "Dynamic Load: 26kN | Bore: 46mm. Industrial Grade.",
+    "description": "Engineered for axial and radial loads in high-velocity spindle applications. Features optimized cage geometry.",
+    "local_image": "/images/products/fag-angular-contact.jpg"
+  },
+  {
+    "id": "mock-25",
+    "name": "FAG / Schaeffler 7456 Deep Groove Ball Bearing",
+    "brand": "FAG / Schaeffler",
+    "specs": "Dynamic Load: 48kN | Bore: 17mm. Industrial Grade.",
+    "description": "High-speed precision engineered for industrial electric motors. Ensures zero-friction rotational stability under load.",
+    "local_image": "/images/products/skf-6204-bearing.jpg"
+  },
+  {
+    "id": "mock-26",
+    "name": "NTN 4707 Thrust Ball Bearing",
+    "brand": "NTN",
+    "specs": "Dynamic Load: 26kN | Bore: 11mm. Industrial Grade.",
+    "description": "Precision thrust plate and caged ball assembly designed to manage extreme axial compression forces smoothly.",
+    "local_image": "/images/products/skf-thrust-bearing.jpg"
+  },
+  {
+    "id": "mock-27",
+    "name": "SKF 4814 Tapered Roller Bearing",
+    "brand": "SKF",
+    "specs": "Dynamic Load: 146kN | Bore: 44mm. Industrial Grade.",
+    "description": "Exceptional rigidity for heavy-duty automotive transmissions. Maintains precise shaft alignment under maximum stress.",
+    "local_image": "/images/products/nbc-tapered-roller.jpg"
+  },
+  {
+    "id": "mock-28",
+    "name": "FAG / Schaeffler 3820 Pillow Block Unit",
+    "brand": "FAG / Schaeffler",
+    "specs": "Dynamic Load: 35kN | Bore: 10mm. Industrial Grade.",
+    "description": "Ready-to-mount bearing unit offering robust shaft support and self-alignment capabilities for industrial conveyors.",
+    "local_image": "/images/products/ntn-pillow-block.jpg"
+  },
+  {
+    "id": "mock-29",
+    "name": "FAG / Schaeffler 3564 Thrust Ball Bearing",
+    "brand": "FAG / Schaeffler",
+    "specs": "Dynamic Load: 57kN | Bore: 58mm. Industrial Grade.",
+    "description": "Precision thrust plate and caged ball assembly designed to manage extreme axial compression forces smoothly.",
+    "local_image": "/images/products/skf-thrust-bearing.jpg"
+  },
+  {
+    "id": "mock-30",
+    "name": "SKF 7543 Tapered Roller Bearing",
+    "brand": "SKF",
+    "specs": "Dynamic Load: 125kN | Bore: 56mm. Industrial Grade.",
+    "description": "Exceptional rigidity for heavy-duty automotive transmissions. Maintains precise shaft alignment under maximum stress.",
+    "local_image": "/images/products/nbc-tapered-roller.jpg"
   }
 ]
