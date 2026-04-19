@@ -1,4 +1,12 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us — Authorised SKF & FAG Bearing Distributor Since 1995",
+  description: "Indpex Global (Himanshu Bearings & Vaibhav Ball Bearings) has been India's trusted industrial bearing distributor since 1995. Authorised dealers for SKF, FAG, NBC, Timken and NTN. 30+ years expertise.",
+  alternates: { canonical: "https://indpexglobal.com/about" },
+  openGraph: { url: "https://indpexglobal.com/about", title: "About Indpex Global | Authorised Bearing Distributor Since 1995", description: "30+ years of industrial bearing supply. Authorised SKF, FAG, NBC, Timken and NTN dealer." },
+};
 
 export default function About() {
   return (

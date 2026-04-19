@@ -1,4 +1,5 @@
 "use client";
+import type { Metadata } from "next";
 
 export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
@@ -32,7 +33,9 @@ export default function Contact() {
               </div>
               <div className="c-info-item" style={{ marginBottom: '30px' }}>
                 <h4 style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-accent)', marginBottom: '10px' }}>Procurement Email</h4>
-                <p style={{ fontSize: '1rem', color: 'var(--color-text-main)', fontWeight: 500 }}>contact@indpexglobal.com</p>
+                <p style={{ fontSize: '1rem', color: 'var(--color-text-main)', fontWeight: 500 }}>
+                                    <a href="mailto:contact@indpexglobal.com" style={{ color: 'var(--color-primary)', textDecoration: 'none', fontWeight: 600 }}>contact@indpexglobal.com</a>
+                                  </p>
               </div>
               <div className="c-info-item" style={{ marginBottom: '30px' }}>
                 <h4 style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-accent)', marginBottom: '10px' }}>Contact Number</h4>
