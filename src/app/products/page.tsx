@@ -161,69 +161,8 @@ export default function Products() {
 
             <section className="l-section">
                 <div className="l-container">
-                    <div className="catalog-header" style={{ marginBottom: '3rem', borderBottom: '2px solid var(--color-bg-light)', paddingBottom: '1.5rem' }}>
-                        <div className="filter-bar-corp" style={{ display: 'flex', gap: '1rem', overflowX: 'auto', padding: '0.5rem 0' }}>
-                            {categories.map(cat => (
-                                <button 
-                                    key={cat}
-                                    className={`filter-btn-corp ${filter === cat ? 'filter-btn--active' : ''}`}
-                                    onClick={() => setFilter(cat)}
-                                    style={{
-                                        background: filter === cat ? 'var(--color-primary)' : 'none',
-                                        border: '1px solid var(--color-border)',
-                                        padding: '0.625rem 1.5rem',
-                                        borderRadius: 'var(--radius-sm)',
-                                        fontWeight: 600,
-                                        fontSize: '0.75rem',
-                                        textTransform: 'uppercase',
-                                        letterSpacing: '0.05em',
-                                        cursor: 'pointer',
-                                        transition: '0.2s',
-                                        whiteSpace: 'nowrap',
-                                        color: filter === cat ? '#fff' : 'var(--color-text-main)'
-                                    }}
-                                >
-                                    {cat}
-                                </button>
-                            ))}
-                        </div>
-                    </div>
 
-                    <div className="category-info" style={{ marginBottom: '3rem', padding: '2rem', background: 'var(--color-bg-light)', borderRadius: 'var(--radius-md)', borderLeft: '4px solid var(--color-primary)' }}>
-                        <h2 style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>{filter}</h2>
-                        <p style={{ color: 'var(--color-text-main)', marginBottom: '1rem' }}>
-                            {categoryDetails[filter]?.description || "Comprehensive range of high-quality industrial components."}
-                        </p>
-                        {categoryDetails[filter]?.items && (
-                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '0.5rem', fontSize: '0.875rem' }}>
-                                {categoryDetails[filter].items.map((item: string) => (
-                                    <div key={item} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                        <span style={{ color: 'var(--color-accent)' }}>•</span> {item}
-                                    </div>
-                                ))}
-                            </div>
-                        )}
-                        {categoryDetails[filter]?.dealers && (
-                            <div style={{ marginTop: '1.5rem', paddingTop: '1rem', borderTop: '1px solid var(--color-border)' }}>
-                                <span style={{ fontWeight: 700, fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--color-text-muted)' }}>Authorised Dealers:</span>
-                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginTop: '0.5rem', fontWeight: 800, color: 'var(--color-primary-dark)' }}>
-                                    {categoryDetails[filter].dealers.map((brand: string) => (
-                                        <span key={brand}>{brand}</span>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
-                        {categoryDetails[filter]?.stockists && (
-                            <div style={{ marginTop: '1rem' }}>
-                                <span style={{ fontWeight: 700, fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--color-text-muted)' }}>Stockists:</span>
-                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginTop: '0.5rem', fontWeight: 800, color: 'var(--color-primary)' }}>
-                                    {categoryDetails[filter].stockists.map((brand: string) => (
-                                        <span key={brand}>{brand}</span>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
-                    </div>
+
 
                     <div style={{ marginTop: '4rem' }}>
                         <ProductGrid products={productData} />
