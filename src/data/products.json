@@ -5,7 +5,7 @@
     "brand": "Timken",
     "specs": "Dynamic Load: 149kN | Bore: 24mm. Industrial Grade.",
     "description": "Exceptional rigidity for heavy-duty automotive transmissions. Maintains precise shaft alignment under maximum stress.",
-    "local_image": "/images/products/nbc-tapered-roller.jpg"
+    "local_image": "/images/products/timken-cylindrical.jpg"
   },
   {
     "id": "mock-2",
@@ -21,7 +21,7 @@
     "brand": "FAG / Schaeffler",
     "specs": "Dynamic Load: 39kN | Bore: 24mm. Industrial Grade.",
     "description": "High-speed precision engineered for industrial electric motors. Ensures zero-friction rotational stability under load.",
-    "local_image": "/images/products/skf-6204-bearing.jpg"
+    "local_image": "/images/products/fag-deep-groove.jpg"
   },
   {
     "id": "mock-4",
@@ -29,7 +29,7 @@
     "brand": "FAG / Schaeffler",
     "specs": "Dynamic Load: 28kN | Bore: 24mm. Industrial Grade.",
     "description": "Precision thrust plate and caged ball assembly designed to manage extreme axial compression forces smoothly.",
-    "local_image": "/images/products/skf-thrust-bearing.jpg"
+    "local_image": "/images/products/fag-thrust-ball.jpg"
   },
   {
     "id": "mock-5",
@@ -37,7 +37,7 @@
     "brand": "FAG / Schaeffler",
     "specs": "Dynamic Load: 29kN | Bore: 44mm. Industrial Grade.",
     "description": "Precision thrust plate and caged ball assembly designed to manage extreme axial compression forces smoothly.",
-    "local_image": "/images/products/skf-thrust-bearing.jpg"
+    "local_image": "/images/products/fag-thrust-ball.jpg"
   },
   {
     "id": "mock-6",
@@ -45,7 +45,7 @@
     "brand": "NBC",
     "specs": "Dynamic Load: 79kN | Bore: 30mm. Industrial Grade.",
     "description": "Optimized roller-end profiling minimizes stress concentrations, delivering unmatched longevity in industrial gearboxes.",
-    "local_image": "/images/products/timken-cylindrical.jpg"
+    "local_image": "/images/products/nbc-tapered-roller.jpg"
   },
   {
     "id": "mock-7",
@@ -61,7 +61,7 @@
     "brand": "NTN",
     "specs": "Dynamic Load: 158kN | Bore: 47mm. Industrial Grade.",
     "description": "Exceptional rigidity for heavy-duty automotive transmissions. Maintains precise shaft alignment under maximum stress.",
-    "local_image": "/images/products/nbc-tapered-roller.jpg"
+    "local_image": "/images/products/ntn-pillow-block.jpg"
   },
   {
     "id": "mock-9",
@@ -69,7 +69,7 @@
     "brand": "FAG / Schaeffler",
     "specs": "Dynamic Load: 127kN | Bore: 18mm. Industrial Grade.",
     "description": "Exceptional rigidity for heavy-duty automotive transmissions. Maintains precise shaft alignment under maximum stress.",
-    "local_image": "/images/products/nbc-tapered-roller.jpg"
+    "local_image": "/images/products/fag-tapered-roller.jpg"
   },
   {
     "id": "mock-10",
@@ -85,7 +85,7 @@
     "brand": "Timken",
     "specs": "Dynamic Load: 42kN | Bore: 43mm. Industrial Grade.",
     "description": "Engineered for axial and radial loads in high-velocity spindle applications. Features optimized cage geometry.",
-    "local_image": "/images/products/fag-angular-contact.jpg"
+    "local_image": "/images/products/skf-spherical-roller.jpg"
   },
   {
     "id": "mock-12",
@@ -101,7 +101,7 @@
     "brand": "FAG / Schaeffler",
     "specs": "Dynamic Load: 124kN | Bore: 22mm. Industrial Grade.",
     "description": "Exceptional rigidity for heavy-duty automotive transmissions. Maintains precise shaft alignment under maximum stress.",
-    "local_image": "/images/products/nbc-tapered-roller.jpg"
+    "local_image": "/images/products/fag-tapered-roller.jpg"
   },
   {
     "id": "mock-14",
@@ -109,7 +109,7 @@
     "brand": "SKF",
     "specs": "Dynamic Load: 48kN | Bore: 21mm. Industrial Grade.",
     "description": "Precision thrust plate and caged ball assembly designed to manage extreme axial compression forces smoothly.",
-    "local_image": "/images/products/skf-thrust-bearing.jpg"
+    "local_image": "/images/products/skf-thrust-ball.jpg"
   },
   {
     "id": "mock-15",
@@ -117,7 +117,7 @@
     "brand": "FAG / Schaeffler",
     "specs": "Dynamic Load: 60kN | Bore: 15mm. Industrial Grade.",
     "description": "Optimized roller-end profiling minimizes stress concentrations, delivering unmatched longevity in industrial gearboxes.",
-    "local_image": "/images/products/timken-cylindrical.jpg"
+    "local_image": "/images/products/fag-cylindrical.jpg"
   },
   {
     "id": "mock-16",
@@ -133,7 +133,7 @@
     "brand": "Timken",
     "specs": "Dynamic Load: 14kN | Bore: 22mm. Industrial Grade.",
     "description": "High-speed precision engineered for industrial electric motors. Ensures zero-friction rotational stability under load.",
-    "local_image": "/images/products/skf-6204-bearing.jpg"
+    "local_image": "/images/products/skf-deep-groove.jpg"
   },
   {
     "id": "mock-18",
@@ -165,7 +165,7 @@
     "brand": "FAG / Schaeffler",
     "specs": "Dynamic Load: 27kN | Bore: 22mm. Industrial Grade.",
     "description": "Precision thrust plate and caged ball assembly designed to manage extreme axial compression forces smoothly.",
-    "local_image": "/images/products/skf-thrust-bearing.jpg"
+    "local_image": "/images/products/fag-thrust-ball.jpg"
   },
   {
     "id": "mock-22",
@@ -173,7 +173,7 @@
     "brand": "NBC",
     "specs": "Dynamic Load: 38kN | Bore: 53mm. Industrial Grade.",
     "description": "High-speed precision engineered for industrial electric motors. Ensures zero-friction rotational stability under load.",
-    "local_image": "/images/products/skf-6204-bearing.jpg"
+    "local_image": "/images/products/nbc-deep-groove.jpg"
   },
   {
     "id": "mock-23",
@@ -181,7 +181,7 @@
     "brand": "NBC",
     "specs": "Dynamic Load: 24kN | Bore: 26mm. Industrial Grade.",
     "description": "Ready-to-mount bearing unit offering robust shaft support and self-alignment capabilities for industrial conveyors.",
-    "local_image": "/images/products/ntn-pillow-block.jpg"
+    "local_image": "/images/products/fag-pillow-block.jpg"
   },
   {
     "id": "mock-24",
@@ -197,7 +197,7 @@
     "brand": "FAG / Schaeffler",
     "specs": "Dynamic Load: 48kN | Bore: 17mm. Industrial Grade.",
     "description": "High-speed precision engineered for industrial electric motors. Ensures zero-friction rotational stability under load.",
-    "local_image": "/images/products/skf-6204-bearing.jpg"
+    "local_image": "/images/products/fag-deep-groove.jpg"
   },
   {
     "id": "mock-26",
@@ -213,7 +213,7 @@
     "brand": "SKF",
     "specs": "Dynamic Load: 146kN | Bore: 44mm. Industrial Grade.",
     "description": "Exceptional rigidity for heavy-duty automotive transmissions. Maintains precise shaft alignment under maximum stress.",
-    "local_image": "/images/products/nbc-tapered-roller.jpg"
+    "local_image": "/images/products/skf-tapered-roller.jpg"
   },
   {
     "id": "mock-28",
@@ -221,7 +221,7 @@
     "brand": "FAG / Schaeffler",
     "specs": "Dynamic Load: 35kN | Bore: 10mm. Industrial Grade.",
     "description": "Ready-to-mount bearing unit offering robust shaft support and self-alignment capabilities for industrial conveyors.",
-    "local_image": "/images/products/ntn-pillow-block.jpg"
+    "local_image": "/images/products/fag-pillow-block.jpg"
   },
   {
     "id": "mock-29",
@@ -229,7 +229,7 @@
     "brand": "FAG / Schaeffler",
     "specs": "Dynamic Load: 57kN | Bore: 58mm. Industrial Grade.",
     "description": "Precision thrust plate and caged ball assembly designed to manage extreme axial compression forces smoothly.",
-    "local_image": "/images/products/skf-thrust-bearing.jpg"
+    "local_image": "/images/products/fag-thrust-ball.jpg"
   },
   {
     "id": "mock-30",
@@ -237,6 +237,6 @@
     "brand": "SKF",
     "specs": "Dynamic Load: 125kN | Bore: 56mm. Industrial Grade.",
     "description": "Exceptional rigidity for heavy-duty automotive transmissions. Maintains precise shaft alignment under maximum stress.",
-    "local_image": "/images/products/nbc-tapered-roller.jpg"
+    "local_image": "/images/products/skf-tapered-roller.jpg"
   }
 ]
