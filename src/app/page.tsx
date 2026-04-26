@@ -12,72 +12,17 @@ interface Product {
 }
 
 const CERTIFICATES = [
-  {
-    id: "skf-2024",
-    title: "SKF Bearings",
-    sub: "Certificate of Authorization 2024",
-    img: "/certificates/skf-2024.png",
-  },
-  {
-    id: "tata-2024",
-    title: "TATA Bearings",
-    sub: "Authorised Stockist 2024-25",
-    img: "/certificates/tata-stockist.png",
-  },
-  {
-    id: "nrb-2023",
-    title: "NRB Bearings",
-    sub: "Authorised Distributor 2023-24",
-    img: "/certificates/nrb-distributor.png",
-  },
-  {
-    id: "schaeffler-2020",
-    title: "Schaeffler Bearings",
-    sub: "Certificate of Authorization 2020",
-    img: "/certificates/schaeffler-auth-2020.jpg",
-  },
-  {
-    id: "schaeffler-2018",
-    title: "Schaeffler Bearings",
-    sub: "Industrial Distributors Meet 2018",
-    img: "/certificates/skf-auth-2024.jpg",
-  },
-  {
-    id: "nrb-2022",
-    title: "NRB Bearings",
-    sub: "Authorised Distributor 2022-23",
-    img: "/certificates/nrb-auth-2022.jpg",
-  },
-  {
-    id: "ravm-v",
-    title: "RAVM",
-    sub: "Membership Certificate (Vaibhav)",
-    img: "/certificates/ravm-member-vaibhav.jpg",
-  },
-  {
-    id: "ravm-h",
-    title: "RAVM",
-    sub: "Membership Certificate (Himanshu)",
-    img: "/certificates/ravm-member-himanshu.jpg",
-  },
-  {
-    id: "skf-2021",
-    title: "SKF India",
-    sub: "Authorised Distributor 2021",
-    img: "/certificates/skf-auth-2021.jpg",
-  },
-  {
-    id: "tata-2017",
-    title: "TATA Bearings",
-    sub: "Authorised Stockist 2017",
-    img: "/certificates/tata-auth-2017.jpg",
-  },
-  {
-    id: "auto-2022",
-    title: "Auto Carnival",
-    sub: "Participation Certificate 2022",
-    img: "/certificates/auto-carnival-2022.jpg",
-  },
+  { id: 'skf-2024', title: 'SKF India', sub: 'Authorised Industrial Distributor 2024', img: '/certificates/skf-auth-2024.jpg' },
+  { id: 'tata-2024', title: 'TATA Bearings', sub: 'Authorised Stockist 2024-25', img: '/certificates/tata-auth-2024.jpg' },
+  { id: 'nrb-2023', title: 'NRB Bearings', sub: 'Authorised Distributor 2023-24', img: '/certificates/nrb-auth-2023.jpg' },
+  { id: 'nrb-ind-2023', title: 'NRB Bearings', sub: 'Authorised Industrial Distributor', img: '/certificates/nrb-industrial-2023.jpg' },
+  { id: 'ravm-v', title: 'RAVM', sub: 'Membership Certificate (Vaibhav)', img: '/certificates/ravm-member-vaibhav.jpg' },
+  { id: 'nrb-2022', title: 'NRB Bearings', sub: 'Authorised Distributor 2022-23', img: '/certificates/nrb-auth-2022.jpg' },
+  { id: 'auto-2022', title: 'Auto Carnival', sub: 'Participation Certificate 2022', img: '/certificates/auto-carnival-2022.jpg' },
+  { id: 'schaeffler', title: 'Schaeffler', sub: 'Official Authorised Partner', img: '/certificates/schaeffler-auth-2020.jpg' },
+  { id: 'skf-2021', title: 'SKF India', sub: 'Authorised Distributor 2021', img: '/certificates/skf-auth-2021.jpg' },
+  { id: 'tata-2017', title: 'TATA Bearings', sub: 'Authorised Stockist 2017', img: '/certificates/tata-auth-2017.jpg' },
+  { id: 'ravm-h', title: 'RAVM', sub: 'Membership Certificate (Himanshu)', img: '/certificates/ravm-member-himanshu.jpg' },
 ];
 
 
@@ -239,7 +184,7 @@ export default function Home() {
               <div className="editorial-entities">
                 <div className="entity-block" data-reveal="fade-in">
                   <div className="entity-meta">
-                    <span className="entity-year">Est. 2011</span>
+                    <span className="entity-year">Est. 1995</span>
                     <h3 className="entity-name">Himanshu Bearings</h3>
                   </div>
                   <p className="entity-desc">Our principal enterprise, primarily specializing in the automobile segment. With decades of foundational experience, we have cultivated an enduring reputation for uncompromising quality and reliability in automotive components.</p>
