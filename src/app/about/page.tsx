@@ -2,10 +2,10 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us — Authorised SKF & FAG Bearing Distributor Since 1995",
-  description: "Indpex Global (Himanshu Bearings & Vaibhav Ball Bearings) has been India's trusted industrial bearing distributor since 1995. Authorised dealers for SKF, FAG, NBC, Timken and NTN. 30+ years expertise.",
+  title: "About Us — Authorised SKF & FAG Bearing Distributor Since 2011",
+  description: "Indpex Global (Himanshu Bearings & Vaibhav Ball Bearings) has been India's trusted industrial bearing distributor since 2011. Authorised dealers for SKF, FAG, NBC, Timken and NTN. 15+ years expertise.",
   alternates: { canonical: "https://indpexglobal.com/about" },
-  openGraph: { url: "https://indpexglobal.com/about", title: "About Indpex Global | Authorised Bearing Distributor Since 1995", description: "30+ years of industrial bearing supply. Authorised SKF, FAG, NBC, Timken and NTN dealer." },
+  openGraph: { url: "https://indpexglobal.com/about", title: "About Indpex Global | Authorised Bearing Distributor Since 2011", description: "15+ years of industrial bearing supply. Authorised SKF, FAG, NBC, Timken and NTN dealer." },
 };
 
 export default function About() {
@@ -48,7 +48,7 @@ export default function About() {
           <div className="l-grid l-grid--2">
             <div className="card-corp" data-reveal="slide-up">
               <h3 className="feat-title">Himanshu Bearings</h3>
-              <p className="feat-text">Established in 1995</p>
+              <p className="feat-text">Established in 2011</p>
               <p style={{ color: 'var(--color-text-main)' }}>Our principal enterprise, primarily specializing in the automobile segment. With decades of foundational experience, we have cultivated an enduring reputation for uncompromising quality and reliability in automotive components.</p>
             </div>
             <div className="card-corp" data-reveal="slide-up">
