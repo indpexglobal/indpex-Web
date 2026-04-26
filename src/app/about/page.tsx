@@ -16,7 +16,7 @@ export default function About() {
         <div className="l-container">
           <div className="banner-corp__content" data-reveal="fade-in">
             <h1 className="banner-corp__title" style={{ fontSize: '3rem', marginBottom: '1rem', color: '#fff' }}>Industrial Authority</h1>
-            <p className="banner-corp__lead" style={{ fontSize: '1.125rem', maxWidth: '600px', margin: '0 auto', opacity: 0.8 }}>Connecting global excellence with local operations since 2011.</p>
+            <p className="banner-corp__lead" style={{ fontSize: '1.125rem', maxWidth: '600px', margin: '0 auto', opacity: 0.8 }}>Connecting global excellence with local operations since 1995.</p>
           </div>
         </div>
       </section>
