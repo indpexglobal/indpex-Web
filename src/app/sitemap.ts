@@ -1,10 +1,11 @@
 import { MetadataRoute } from "next";
+import productData from "@/data/products.json";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://indpexglobal.com";
   const now = new Date();
 
-  return [
+  const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: base,
       lastModified: now,
@@ -36,4 +37,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
   ];
+
+  const productRoutes: MetadataRoute.Sitemap = productData.map((product) => ({
+    url: `${base}/products/${product.id}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  return [...staticRoutes, ...productRoutes];
 }

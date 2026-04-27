@@ -274,5 +274,101 @@
     "specs": "Bore: 50mm | OD: 75mm | Maintenance-free PTFE Liner | Contact Angle: 8°",
     "description": "NTN maintenance-free spherical plain bearing for oscillating motion in agricultural linkages, steering systems, and industrial robotic joints.",
     "local_image": "/images/products/fag-angular-contact.jpg"
+  },
+  {
+    "id": "skf-6024-m",
+    "name": "SKF 6024-M Deep Groove Ball Bearing – 120mm Bore, Brass Cage, Open",
+    "brand": "SKF",
+    "specs": "Bore 120mm | OD 180mm | Width 28mm | Brass cage | Open design",
+    "description": "Large-bore SKF deep groove ball bearing with brass cage for operation at elevated temperatures. Precision-ground raceways ensure low noise and minimal runout. Suitable for large AC/DC traction motors and industrial compressors.",
+    "local_image": "/images/products/skf-6024-m.png"
+  },
+  {
+    "id": "skf-353101-hub-bearing",
+    "name": "SKF 353101 Hub Bearing Unit – Pre-set Flanged, Truck/LCV Front Wheel",
+    "brand": "SKF",
+    "specs": "Pre-set | Flanged | For truck and LCV front wheel hub",
+    "description": "Pre-set flanged hub bearing unit for truck and LCV front wheel hubs. Integrated flanged design reduces component count and speeds installation. Tapered roller technology handles combined radial and heavy axial loads.",
+    "local_image": "/images/products/skf-353101.png"
+  },
+  {
+    "id": "skf-lqcf-20-linear-rail",
+    "name": "SKF LQCF 20 Linear Guidance Carriage – 20mm Rail, 4-Direction Load",
+    "brand": "SKF",
+    "specs": "Rail width 20mm | 4-direction load | Standard & flanged carriage versions",
+    "description": "Compact SKF profiled rail linear guidance system with 20mm rail. Smooth, accurate four-directional load-carrying for automation, CNC, and robotics. Low-friction recirculating ball circuit.",
+    "local_image": "/images/products/skf-lqcf-20.png"
+  },
+  {
+    "id": "fag-6316-m-c3",
+    "name": "FAG 6316-M-C3 Deep Groove Ball Bearing – 80mm Bore, Brass Cage, C3",
+    "brand": "FAG / Schaeffler",
+    "specs": "Bore 80mm | OD 170mm | Width 39mm | Brass cage | C3 clearance",
+    "description": "Extra-large FAG deep groove ball bearing with brass cage and C3 internal clearance. C3 clearance compensates for thermal shaft expansion. Designed for large electric motors and heavy-duty industrial drives.",
+    "local_image": "/images/products/fag-6316-m-c3.png"
+  },
+  {
+    "id": "fag-22326-e1-k",
+    "name": "FAG 22326-E1-K Spherical Roller Bearing – 130mm Tapered Bore, 570kN",
+    "brand": "FAG / Schaeffler",
+    "specs": "Bore 130mm (1:12 taper) | OD 280mm | Dynamic Load 570kN | E1 design",
+    "description": "Large-bore FAG spherical roller bearing with tapered bore for adapter sleeve mounting. E1 optimised internal geometry for higher load capacity and lower heat generation. For mining conveyors and large gearboxes.",
+    "local_image": "/images/products/fag-22326-e1-k.png"
+  },
+  {
+    "id": "fag-heater50-basic-230v",
+    "name": "FAG HEATER50-BASIC-230V Induction Bearing Heater – Up to 50kg",
+    "brand": "FAG / Schaeffler",
+    "specs": "Max 50kg | 230V single-phase | Auto-demagnetisation after cycle",
+    "description": "Compact FAG induction heating device for safe bearing mounting on components up to 50kg. Eliminates bearing damage from hammer or press force. Essential for industrial maintenance workshops.",
+    "local_image": "/images/products/fag-heater50.png"
+  },
+  {
+    "id": "nbc-6305-zz",
+    "name": "NBC 6305-ZZ Deep Groove Ball Bearing – 25mm Bore, Made in India",
+    "brand": "NBC",
+    "specs": "Bore 25mm | OD 62mm | Width 17mm | ZZ metal shields | Made in India",
+    "description": "NBC deep groove ball bearing with ZZ double metal shields. Manufactured at NEI's Jaipur plant. ZZ shields protect against dust and contamination. Suitable for electric motors and pumps.",
+    "local_image": "/images/products/nbc-6305-zz.png"
+  },
+  {
+    "id": "nbc-30205",
+    "name": "NBC 30205 Tapered Roller Bearing – 25mm Bore, Automotive/2-Wheeler",
+    "brand": "NBC",
+    "specs": "Bore 25mm | OD 52mm | Width 16.25mm | For 2-wheelers and light vehicles",
+    "description": "NBC single-row tapered roller bearing for automotive and 2-wheeler OEM. Handles combined radial and axial loads. Standard fitment in motorcycle wheel hubs and scooter gearboxes.",
+    "local_image": "/images/products/nbc-30205.png"
+  },
+  {
+    "id": "ntn-6206-llu",
+    "name": "NTN 6206-LLU Deep Groove Ball Bearing – 30mm Bore, 2RS Rubber Sealed",
+    "brand": "NTN",
+    "specs": "Bore 30mm | OD 62mm | Width 16mm | LLU (2RS) rubber seals | Pre-greased",
+    "description": "NTN deep groove ball bearing with LLU contact rubber seals on both sides. Pre-greased and sealed for maintenance-free operation. Superior contamination protection for electric motors and pumps.",
+    "local_image": "/images/products/ntn-6206-llu.png"
+  },
+  {
+    "id": "ntn-4t-32007",
+    "name": "NTN 4T-32007 Tapered Roller Bearing – 35mm Bore, Enhanced Heat Treatment",
+    "brand": "NTN",
+    "specs": "Bore 35mm | OD 62mm | Width 18mm | 4T heat treatment | Metric series",
+    "description": "NTN metric-series tapered roller bearing with 4T enhanced heat treatment for improved fatigue life. Suitable for automotive transmissions and industrial gearboxes.",
+    "local_image": "/images/products/ntn-4t-32007.png"
+  },
+  {
+    "id": "ntn-ucp-207",
+    "name": "NTN UCP 207 Pillow Block Bearing Unit – 35mm Shaft, Cast Iron",
+    "brand": "NTN",
+    "specs": "Shaft 35mm | UC207 insert | P207 cast iron housing | Set screw | 2-bolt",
+    "description": "NTN complete pillow block unit with UC207 self-aligning insert in P207 cast iron housing. Bore 35mm. 2-bolt mounting for conveyors and fan installations.",
+    "local_image": "/images/products/ntn-ucp-207.png"
+  },
+  {
+    "id": "timken-lm11749-lm11710",
+    "name": "Timken LM11749/LM11710 Tapered Roller Bearing – 3/4\" Bore, Inch Series",
+    "brand": "Timken",
+    "specs": "Bore 19.05mm (3/4\") | OD 45.24mm | Width 15.49mm | Inch series",
+    "description": "Timken imperial inch-series tapered roller bearing. Bore 3/4 inch. Used in agricultural equipment wheel hubs and small gearboxes. Timken is the global leader in inch-series bearings.",
+    "local_image": "/images/products/timken-lm11749.png"
   }
 ]
