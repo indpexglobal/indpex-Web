@@ -156,12 +156,19 @@ const categoryDetails: Record<string, { description: string; items?: string[]; d
 
 import Link from "next/link";
 
+import productData from "@/data/products.json";
+
+// Pick a diverse set of high-value products for the homepage
 const FEATURED_PRODUCTS = [
-  { id: 'b1', title: 'Deep Grove Ball Bearings', category: 'Bearings', image_url: 'https://images.unsplash.com/photo-1594814136440-d4b3506450f3?auto=format&fit=crop&q=80&w=400' },
-  { id: 'b3', title: 'Cylindrical Roller Bearings', category: 'Bearings', image_url: 'https://images.unsplash.com/photo-159742324403d-d556d0bd1c9c?auto=format&fit=crop&q=80&w=400' },
-  { id: 't1', title: 'Heavy Duty V-Belt', category: 'Transmission & Motion', image_url: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=400' },
-  { id: 'e3', title: 'Pneumatic Air Fittings', category: 'Electrical & Wiring', image_url: 'https://images.unsplash.com/photo-1581092162384-8987ec176471?auto=format&fit=crop&q=80&w=400' },
-];
+  productData.find(p => p.id === "arcanol-multitop"),
+  productData.find(p => p.id === "schaeffler-smartcheck"),
+  productData.find(p => p.id === "fag-precision-spindle"),
+  productData.find(p => p.id === "fag-heater150"),
+  productData.find(p => p.id === "skf-lqcf-20-linear-rail"),
+  productData.find(p => p.id === "fag-sns-plummer"),
+  productData.find(p => p.id === "skf-013"), // INSOCOAT
+  productData.find(p => p.id === "timken-22215CJ"),
+].filter(Boolean);
 
 
 
@@ -412,18 +419,32 @@ export default function Home() {
           <div className="product-marquee">
             {/* Original Set */}
             {featuredProducts.map(p => (
-              <div className="product-card" key={p.id}>
-                <div className="product-image"><img src={p.image_url || "/bearings-hero.png"} alt={p.title} /></div>
-                <h3 className="product-name">{p.title}</h3>
-                <Link href="/products" className="product-link">Explore Specifications &rarr;</Link>
+              <div className="product-card" key={p!.id}>
+                <div className="product-image">
+                  <img src={(p as any).local_image || "/bearings-hero.png"} alt={p!.name} />
+                </div>
+                <div style={{ padding: '1.5rem' }}>
+                    <span style={{ fontSize: '0.65rem', fontWeight: 800, textTransform: 'uppercase', color: 'var(--color-primary)', letterSpacing: '0.1em' }}>
+                        {(p as any).brand} • {(p as any).category || 'Bearings'}
+                    </span>
+                    <h3 className="product-name" style={{ fontSize: '1.1rem', margin: '0.5rem 0 1rem', height: '2.4rem', overflow: 'hidden' }}>{p!.name}</h3>
+                    <Link href="/products" className="product-link">View Details &rarr;</Link>
+                </div>
               </div>
             ))}
             {/* Duplicate Set for infinite scroll */}
             {featuredProducts.map(p => (
-              <div className="product-card" key={`dup-${p.id}`}>
-                <div className="product-image"><img src={p.image_url || "/bearings-hero.png"} alt={p.title} /></div>
-                <h3 className="product-name">{p.title}</h3>
-                <Link href="/products" className="product-link">Explore Specifications &rarr;</Link>
+              <div className="product-card" key={`dup-${p!.id}`}>
+                <div className="product-image">
+                  <img src={(p as any).local_image || "/bearings-hero.png"} alt={p!.name} />
+                </div>
+                <div style={{ padding: '1.5rem' }}>
+                    <span style={{ fontSize: '0.65rem', fontWeight: 800, textTransform: 'uppercase', color: 'var(--color-primary)', letterSpacing: '0.1em' }}>
+                        {(p as any).brand} • {(p as any).category || 'Bearings'}
+                    </span>
+                    <h3 className="product-name" style={{ fontSize: '1.1rem', margin: '0.5rem 0 1rem', height: '2.4rem', overflow: 'hidden' }}>{p!.name}</h3>
+                    <Link href="/products" className="product-link">View Details &rarr;</Link>
+                </div>
               </div>
             ))}
           </div>

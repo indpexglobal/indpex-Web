@@ -387,25 +387,25 @@
     "id": "arcanol-hyperform-46", "name": "Arcanol HYPERFORM 46 – Premium Industrial Hydraulic Oil", "brand": "FAG / Schaeffler", "category": "Lubricants",
     "specs": "ISO VG 46 | Anti-wear (AW) | Thermal Stability: High",
     "description": "High-purity hydraulic oil designed for precision industrial systems. Reduces pump wear and prevents sludge formation in high-pressure hydraulic circuits.",
-    "local_image": "/images/products/arcanol-oil.jpg"
+    "local_image": "/images/products/arcanol-hyperform.png"
   },
   {
     "id": "arcanol-gearguard-320", "name": "Arcanol GEARGUARD 320 – Extreme Pressure Gear Oil", "brand": "FAG / Schaeffler", "category": "Lubricants",
     "specs": "ISO VG 320 | EP Performance | Micropitting Resistance",
     "description": "Advanced gear oil for heavily loaded industrial gear units. Protects against micropitting and ensures long service life for high-torque transmissions.",
-    "local_image": "/images/products/arcanol-oil.jpg"
+    "local_image": "/images/products/arcanol-gearguard.jpg"
   },
   {
     "id": "arcalub-c1", "name": "ARCALUB C1 – Automatic Single-Point Lubricator", "brand": "FAG / Schaeffler", "category": "Lubricants",
     "specs": "Volume: 125cm³ | Pressure: 5 bar | Period: 1-12 months (Adjustable)",
     "description": "Automatic lubricator for reliable, continuous grease supply to single bearing points. Ensures precise lubrication and reduces maintenance costs.",
-    "local_image": "/images/products/arcalub-c1.jpg"
+    "local_image": "/images/products/arcalub-c1.png"
   },
   {
     "id": "fag-heater150", "name": "FAG HEATER150 – Induction Heater for Large Bearings", "brand": "FAG / Schaeffler", "category": "Tools",
     "specs": "Max Weight: 150kg | 400V 3-Phase | Temperature Control: Up to 240°C",
     "description": "Powerful induction heating device for mounting large bearings. Safe, uniform heating prevents localized overheating and extends bearing fatigue life.",
-    "local_image": "/images/products/fag-heater50.png"
+    "local_image": "/images/products/fag-heater150.jpg"
   },
   {
     "id": "fag-mounting-kit", "name": "FAG Fitting Tool Set – Mechanical Mounting Kit", "brand": "FAG / Schaeffler", "category": "Tools",
@@ -429,18 +429,18 @@
     "id": "fag-sns-plummer", "name": "FAG SNS Series Plummer Block Housing", "brand": "FAG / Schaeffler", "category": "Housings",
     "specs": "Material: Spheroidal Graphite Cast Iron | Lubrication: Grease or Oil",
     "description": "High-performance split plummer block housing. Patented design increases bearing life by up to 50% through optimized load distribution.",
-    "local_image": "/images/products/fag-pillow-block.jpg"
+    "local_image": "/images/products/fag-sns-plummer.jpg"
   },
   {
     "id": "ina-kuve-linear", "name": "INA KUVE Profiled Rail Linear Guidance System", "brand": "FAG / Schaeffler", "category": "Linear",
     "specs": "Accuracy: Precision class G1 | Sealing: Integral | High stiffness",
     "description": "Four-row recirculating linear ball bearing and guideway assembly. Provides high precision and stiffness for CNC machines and automation systems.",
-    "local_image": "/images/products/skf-lqcf-20.png"
+    "local_image": "/images/products/ina-kuve.jpg"
   },
   {
     "id": "fag-precision-spindle", "name": "FAG Super Precision Spindle Bearing (HSS70 Series)", "brand": "FAG / Schaeffler", "category": "Bearings",
     "specs": "Precision: P4S | Contact Angle: 15° | Ceramic Ball Options available",
     "description": "Ultra-high precision angular contact ball bearing for machine tool spindles. Engineered for maximum speed and accuracy in high-end CNC applications.",
-    "local_image": "/images/products/fag-angular-contact.jpg"
+    "local_image": "/images/products/fag-precision-spindle.jpg"
   }
 ]
