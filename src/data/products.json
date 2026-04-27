@@ -429,18 +429,18 @@
     "id": "fag-sns-plummer", "name": "FAG SNS Series Plummer Block Housing", "brand": "FAG / Schaeffler", "category": "Housings",
     "specs": "Material: Spheroidal Graphite Cast Iron | Lubrication: Grease or Oil",
     "description": "High-performance split plummer block housing. Patented design increases bearing life by up to 50% through optimized load distribution.",
-    "local_image": "/images/products/fag-sns-plummer.jpg"
+    "local_image": "/images/products/fag-sns-plummer.png"
   },
   {
     "id": "ina-kuve-linear", "name": "INA KUVE Profiled Rail Linear Guidance System", "brand": "FAG / Schaeffler", "category": "Linear",
     "specs": "Accuracy: Precision class G1 | Sealing: Integral | High stiffness",
     "description": "Four-row recirculating linear ball bearing and guideway assembly. Provides high precision and stiffness for CNC machines and automation systems.",
-    "local_image": "/images/products/ina-kuve.jpg"
+    "local_image": "/images/products/ina-kuve.png"
   },
   {
     "id": "fag-precision-spindle", "name": "FAG Super Precision Spindle Bearing (HSS70 Series)", "brand": "FAG / Schaeffler", "category": "Bearings",
     "specs": "Precision: P4S | Contact Angle: 15° | Ceramic Ball Options available",
     "description": "Ultra-high precision angular contact ball bearing for machine tool spindles. Engineered for maximum speed and accuracy in high-end CNC applications.",
-    "local_image": "/images/products/fag-precision-spindle.jpg"
+    "local_image": "/images/products/fag-precision-spindle.png"
   }
 ]
