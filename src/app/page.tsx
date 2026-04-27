@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 interface Product {
     id: string;
@@ -167,7 +167,13 @@ const FEATURED_PRODUCTS = [
 
 export default function Home() {
   const featuredProducts = FEATURED_PRODUCTS;
-  const [selectedCert, setSelectedCert] = useState<typeof CERTIFICATES[0] | null>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.6; // Slow playback as requested
+    }
+  }, []);
 
   return (
     <div className="home-page">
@@ -187,10 +193,24 @@ export default function Home() {
       {/* Corporate Hero Section */}
       <section className="hero-corp" style={{ paddingTop: '140px' }}>
         <div className="hero-corp__video-wrap">
-          <video autoPlay muted loop playsInline className="hero-corp__video" poster="/bearings-hero.png">
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-industrial-robotic-arm-working-in-a-factory-40342-large.mp4" type="video/mp4" />
+          <video 
+            ref={videoRef}
+            autoPlay 
+            muted 
+            loop 
+            playsInline 
+            className="hero-corp__video" 
+            poster="/bearings-hero.png"
+          >
+            <source src="/videos/hero-bg.mp4" type="video/mp4" />
           </video>
-          <div className="hero-corp__overlay"></div>
+          {/* Glass Effect Overlay */}
+          <div className="hero-corp__overlay" style={{ 
+            backdropFilter: 'blur(8px) saturate(120%)', 
+            WebkitBackdropFilter: 'blur(8px) saturate(120%)',
+            backgroundColor: 'rgba(30, 58, 90, 0.4)',
+            backgroundImage: 'radial-gradient(circle at center, transparent 0%, rgba(30, 58, 90, 0.6) 100%)'
+          }}></div>
         </div>
         <div className="l-container">
           <div className="hero-corp__content">
