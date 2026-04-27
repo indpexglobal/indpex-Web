@@ -1,14 +1,31 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import ProductGrid from "@/components/ProductGrid";
 import productData from "@/data/products.json";
 
 const BRANDS = ["All Brands", "SKF", "FAG / Schaeffler", "NBC", "Timken", "NTN"];
 
-export default function Products() {
+function ProductsContent() {
+    const searchParams = useSearchParams();
+    const brandParam = searchParams.get("brand");
+    
     const [search, setSearch] = useState("");
     const [brand, setBrand] = useState("All Brands");
+
+    // Sync brand state with query param
+    useEffect(() => {
+        if (brandParam) {
+            // Map "FAG" to "FAG / Schaeffler" if needed
+            const foundBrand = BRANDS.find(b => b.includes(brandParam));
+            if (foundBrand) {
+                setBrand(foundBrand);
+            }
+        } else {
+            setBrand("All Brands");
+        }
+    }, [brandParam]);
 
     const filtered = useMemo(() => {
         return productData.filter(p => {
@@ -119,5 +136,13 @@ export default function Products() {
                 </div>
             </section>
         </div>
+    );
+}
+
+export default function Products() {
+    return (
+        <Suspense fallback={<div className="l-container py-20 text-center">Loading catalog...</div>}>
+            <ProductsContent />
+        </Suspense>
     );
 }
