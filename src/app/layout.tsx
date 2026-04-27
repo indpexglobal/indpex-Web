@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { IBM_Plex_Sans, Roboto, Inter } from "next/font/google";
 import "./globals.css";
@@ -171,7 +172,9 @@ export default function RootLayout({
       </head>
        <body className="antialiased">
         <ScrollReveal />
-        <Navbar />
+        <Suspense>
+          <Navbar />
+        </Suspense>
         <main>{children}</main>
         <Footer />
         <WhatsAppWidget />
