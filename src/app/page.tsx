@@ -167,6 +167,7 @@ const FEATURED_PRODUCTS = [
 
 export default function Home() {
   const featuredProducts = FEATURED_PRODUCTS;
+  const [selectedCert, setSelectedCert] = useState<typeof CERTIFICATES[0] | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
