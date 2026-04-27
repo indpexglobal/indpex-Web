@@ -55,13 +55,13 @@ const Navbar = () => {
                         {/* Brands Dropdown */}
                         <li 
                             ref={dropdownRef}
-                            className="relative group/brands"
+                            className="relative group/brands py-2 md:py-0"
                             onMouseEnter={() => setIsBrandsOpen(true)}
                             onMouseLeave={() => setIsBrandsOpen(false)}
                         >
                             <button 
                                 onClick={() => setIsBrandsOpen(!isBrandsOpen)}
-                                className={`nav-corp__link flex items-center gap-1 w-full text-left py-2 md:py-0 ${isBrandsOpen ? 'text-[var(--color-primary)]' : ''}`}
+                                className={`nav-corp__link flex items-center gap-1 w-full text-left py-2 md:py-4 ${isBrandsOpen ? 'text-[var(--color-primary)]' : ''}`}
                             >
                                 Brands
                                 <svg className={`w-4 h-4 transition-transform duration-200 ${isBrandsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -71,14 +71,17 @@ const Navbar = () => {
 
                             {/* Dropdown Menu */}
                             <div className={`
-                                md:absolute md:top-full md:left-0 md:mt-2 md:w-72 md:bg-white md:rounded-xl md:shadow-2xl md:border md:border-slate-100 md:z-50
-                                transition-all duration-200 ease-in-out overflow-hidden
+                                md:absolute md:top-full md:left-0 md:w-72 md:bg-white md:rounded-xl md:shadow-2xl md:border md:border-slate-100 md:z-50
+                                transition-all duration-200 ease-in-out
                                 ${isBrandsOpen 
                                     ? 'opacity-100 translate-y-0 visible max-h-[600px] py-2' 
                                     : 'opacity-0 -translate-y-2 invisible max-h-0 pointer-events-none md:max-h-none'
                                 }
-                                bg-slate-50/50 md:bg-white rounded-lg mt-1 md:mt-2
+                                bg-slate-50/50 md:bg-white rounded-lg
                             `}>
+                                {/* Invisible Bridge to prevent closing on gap hover */}
+                                <div className="hidden md:block absolute -top-4 left-0 w-full h-4" />
+                                
                                 <div className="px-2">
                                     {BRANDS_MENU.map((brand) => (
                                         <Link
