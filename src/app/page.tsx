@@ -314,17 +314,28 @@ export default function Home() {
               We represent global standards of quality through our strategic partnerships. We are proud **Authorised Dealers** and specialized **Stockists** of world-renowned manufacturing brands.
             </p>
             
-            <div className="brands-vertical-layout" style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+            <div className="brands-vertical-layout" style={{ display: 'flex', flexDirection: 'column', gap: '4rem' }}>
               {/* Authorised Dealers - Top Row */}
               <div className="brands-row">
-                <span style={{ display: 'block', fontWeight: 700, fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--color-text-muted)', marginBottom: '1.5rem', letterSpacing: '0.1em' }}>Authorised Dealers:</span>
-                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '3rem', alignItems: 'center' }}>
-                  <span style={{ fontWeight: 800, fontSize: '1.75rem', color: 'var(--color-primary-dark)' }}>SKF</span>
-                  <span style={{ fontWeight: 800, fontSize: '1.75rem', color: 'var(--color-primary-dark)' }}>FAG</span>
-                  <span style={{ fontWeight: 800, fontSize: '1.75rem', color: 'var(--color-primary-dark)' }}>TATA</span>
-                  <span style={{ fontWeight: 800, fontSize: '1.75rem', color: 'var(--color-primary-dark)' }}>NRB</span>
-                  <span style={{ fontWeight: 800, fontSize: '1.75rem', color: 'var(--color-primary-dark)' }}>VAIB</span>
-                  <span style={{ fontWeight: 800, fontSize: '1.75rem', color: 'var(--color-primary-dark)' }}>CSG</span>
+                <span style={{ display: 'block', fontWeight: 700, fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--color-text-muted)', marginBottom: '2rem', letterSpacing: '0.1em' }}>Authorised Dealers:</span>
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '3rem 4rem', alignItems: 'center' }}>
+                  {[
+                    { name: "SKF", logo: "/images/logos/skf.png" },
+                    { name: "FAG", logo: "/images/logos/fag.png" },
+                    { name: "TATA", logo: "/images/logos/tata.png" },
+                    { name: "NRB", logo: "/images/logos/nrb.png" },
+                    { name: "VAIB", logo: null },
+                    { name: "CSG", logo: null }
+                  ].map(brand => (
+                    <div key={brand.name} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem' }}>
+                      {brand.logo ? (
+                        <img src={brand.logo} alt={brand.name} style={{ height: '40px', objectFit: 'contain', filter: 'grayscale(100%)', opacity: 0.8, transition: 'all 0.3s' }} onMouseEnter={e => { e.currentTarget.style.filter = 'none'; e.currentTarget.style.opacity = '1'; }} onMouseLeave={e => { e.currentTarget.style.filter = 'grayscale(100%)'; e.currentTarget.style.opacity = '0.8'; }} />
+                      ) : (
+                        <span style={{ fontWeight: 800, fontSize: '1.75rem', color: 'var(--color-primary-dark)' }}>{brand.name}</span>
+                      )}
+                      {brand.logo && <span style={{ fontWeight: 700, fontSize: '0.7rem', color: 'var(--color-text-muted)', textTransform: 'uppercase' }}>{brand.name}</span>}
+                    </div>
+                  ))}
                 </div>
               </div>
 
@@ -332,13 +343,24 @@ export default function Home() {
 
               {/* Stockists - Bottom Row */}
               <div className="brands-row">
-                <span style={{ display: 'block', fontWeight: 700, fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--color-text-muted)', marginBottom: '1.5rem', letterSpacing: '0.1em' }}>Strategic Stockists:</span>
-                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2.5rem', alignItems: 'center', opacity: 0.8 }}>
-                  <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary)' }}>NBC</span>
-                  <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary)' }}>ARB</span>
-                  <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary)' }}>TIMKEN</span>
-                  <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary)' }}>LINCOLN</span>
-                  <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary)' }}>NMB</span>
+                <span style={{ display: 'block', fontWeight: 700, fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--color-text-muted)', marginBottom: '2rem', letterSpacing: '0.1em' }}>Strategic Stockists:</span>
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2.5rem 3.5rem', alignItems: 'center' }}>
+                  {[
+                    { name: "NBC", logo: "/images/logos/nbc.png" },
+                    { name: "ARB", logo: "/images/logos/arb.png" },
+                    { name: "TIMKEN", logo: "/images/logos/timken.png" },
+                    { name: "LINCOLN", logo: "/images/logos/lincoln.png" },
+                    { name: "NMB", logo: "/images/logos/nmb.png" }
+                  ].map(brand => (
+                    <div key={brand.name} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem' }}>
+                      {brand.logo ? (
+                        <img src={brand.logo} alt={brand.name} style={{ height: '35px', objectFit: 'contain', filter: 'grayscale(100%)', opacity: 0.7, transition: 'all 0.3s' }} onMouseEnter={e => { e.currentTarget.style.filter = 'none'; e.currentTarget.style.opacity = '1'; }} onMouseLeave={e => { e.currentTarget.style.filter = 'grayscale(100%)'; e.currentTarget.style.opacity = '0.7'; }} />
+                      ) : (
+                        <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary)' }}>{brand.name}</span>
+                      )}
+                      {brand.logo && <span style={{ fontWeight: 700, fontSize: '0.65rem', color: 'var(--color-text-muted)', textTransform: 'uppercase' }}>{brand.name}</span>}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
