@@ -311,7 +311,7 @@ export default function Home() {
           <div className="card-corp" data-reveal="fade-in" style={{ textAlign: 'center', borderTop: '3px solid var(--color-primary)' }}>
             <h2 className="corp-h2" style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Authorised Dealerships & Strategic Stock</h2>
             <p style={{ marginBottom: '2.5rem', color: 'var(--color-text-main)', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
-              We represent global standards of quality through our strategic partnerships. We are proud **Authorised Dealers** and specialized **Stockists** of world-renowned manufacturing brands.
+              We represent global standards of quality through our strategic partnerships. We are proud <strong>Authorised Dealers</strong> and specialized <strong>Stockists</strong> of world-renowned manufacturing brands.
             </p>
             
             <div className="brands-vertical-layout" style={{ display: 'flex', flexDirection: 'column', gap: '4rem' }}>
@@ -329,7 +329,7 @@ export default function Home() {
                   ].map(brand => (
                     <div key={brand.name} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem' }}>
                       {brand.logo ? (
-                        <img src={brand.logo} alt={brand.name} style={{ height: '40px', objectFit: 'contain', filter: 'grayscale(100%)', opacity: 0.8, transition: 'all 0.3s' }} onMouseEnter={e => { e.currentTarget.style.filter = 'none'; e.currentTarget.style.opacity = '1'; }} onMouseLeave={e => { e.currentTarget.style.filter = 'grayscale(100%)'; e.currentTarget.style.opacity = '0.8'; }} />
+                        <img src={brand.logo} alt={brand.name} style={{ height: '50px', objectFit: 'contain', transition: 'all 0.3s' }} />
                       ) : (
                         <span style={{ fontWeight: 800, fontSize: '1.75rem', color: 'var(--color-primary-dark)' }}>{brand.name}</span>
                       )}
@@ -354,7 +354,7 @@ export default function Home() {
                   ].map(brand => (
                     <div key={brand.name} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem' }}>
                       {brand.logo ? (
-                        <img src={brand.logo} alt={brand.name} style={{ height: '35px', objectFit: 'contain', filter: 'grayscale(100%)', opacity: 0.7, transition: 'all 0.3s' }} onMouseEnter={e => { e.currentTarget.style.filter = 'none'; e.currentTarget.style.opacity = '1'; }} onMouseLeave={e => { e.currentTarget.style.filter = 'grayscale(100%)'; e.currentTarget.style.opacity = '0.7'; }} />
+                        <img src={brand.logo} alt={brand.name} style={{ height: '40px', objectFit: 'contain', transition: 'all 0.3s' }} />
                       ) : (
                         <span style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary)' }}>{brand.name}</span>
                       )}
