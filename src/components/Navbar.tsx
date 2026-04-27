@@ -61,7 +61,7 @@ const Navbar = () => {
                         >
                             <button 
                                 onClick={() => setIsBrandsOpen(!isBrandsOpen)}
-                                className={`nav-corp__link flex items-center gap-1 w-full text-left py-2 md:py-4 ${isBrandsOpen ? 'text-[var(--color-primary)]' : ''}`}
+                                className={`nav-corp__link flex items-center gap-1 w-full text-left py-2 md:py-4 bg-transparent border-none outline-none focus:outline-none ${isBrandsOpen ? 'text-[var(--color-primary)]' : ''}`}
                             >
                                 Brands
                                 <svg className={`w-4 h-4 transition-transform duration-200 ${isBrandsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
