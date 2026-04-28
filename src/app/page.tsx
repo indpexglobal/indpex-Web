@@ -155,6 +155,7 @@ const categoryDetails: Record<string, { description: string; items?: string[]; d
 };
 
 import Link from "next/link";
+import AnimatedNumber from "@/components/AnimatedNumber";
 
 import productData from "@/data/products.json";
 
@@ -293,19 +294,19 @@ export default function Home() {
         <div className="l-container">
           <div className="l-grid l-grid--4" style={{ textAlign: 'center' }}>
             <div className="stat-corp" data-reveal="slide-up">
-              <span className="stat-corp__num">1995</span>
+              <span className="stat-corp__num"><AnimatedNumber value="1995" /></span>
               <span className="stat-corp__label">Established</span>
             </div>
-            <div className="stat-corp" data-reveal="slide-up">
-              <span className="stat-corp__num">50+</span>
+            <div className="stat-corp" data-reveal="slide-up" style={{ transitionDelay: '100ms' }}>
+              <span className="stat-corp__num"><AnimatedNumber value="50+" /></span>
               <span className="stat-corp__label">Strategic Partners</span>
             </div>
-            <div className="stat-corp" data-reveal="slide-up">
-              <span className="stat-corp__num">100%</span>
+            <div className="stat-corp" data-reveal="slide-up" style={{ transitionDelay: '200ms' }}>
+              <span className="stat-corp__num"><AnimatedNumber value="100%" /></span>
               <span className="stat-corp__label">Quality Verified</span>
             </div>
-            <div className="stat-corp" data-reveal="slide-up">
-              <span className="stat-corp__num">24h</span>
+            <div className="stat-corp" data-reveal="slide-up" style={{ transitionDelay: '300ms' }}>
+              <span className="stat-corp__num"><AnimatedNumber value="24h" /></span>
               <span className="stat-corp__label">Rapid Response</span>
             </div>
           </div>
