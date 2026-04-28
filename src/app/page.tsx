@@ -215,10 +215,10 @@ export default function Home() {
           </video>
           {/* Glass Effect Overlay */}
           <div className="hero-corp__overlay" style={{ 
-            backdropFilter: 'blur(10px) saturate(110%)', 
-            WebkitBackdropFilter: 'blur(10px) saturate(110%)',
-            backgroundColor: 'rgba(15, 23, 42, 0.25)',
-            backgroundImage: 'radial-gradient(circle at center, transparent 0%, rgba(15, 23, 42, 0.4) 100%)'
+            backdropFilter: 'blur(4px) saturate(110%)', 
+            WebkitBackdropFilter: 'blur(4px) saturate(110%)',
+            backgroundColor: 'rgba(15, 23, 42, 0.35)',
+            backgroundImage: 'radial-gradient(circle at center, transparent 0%, rgba(15, 23, 42, 0.5) 100%)'
           }}></div>
         </div>
         <div className="l-container">
