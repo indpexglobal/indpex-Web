@@ -176,11 +176,24 @@ const FEATURED_PRODUCTS = [
 export default function Home() {
   const featuredProducts = FEATURED_PRODUCTS;
   const [selectedCert, setSelectedCert] = useState<typeof CERTIFICATES[0] | null>(null);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.playbackRate = 0.6; // Slow playback as requested
+      
+      // Attempt to force play for mobile browsers
+      const attemptPlay = async () => {
+        try {
+          if (videoRef.current) {
+            await videoRef.current.play();
+          }
+        } catch (error) {
+          console.error("Video autoplay failed:", error);
+        }
+      };
+      attemptPlay();
     }
   }, []);
 
@@ -209,10 +222,30 @@ export default function Home() {
             loop 
             playsInline 
             className="hero-corp__video" 
-            poster="/bearings-hero.png"
+            preload="auto"
+            onPlaying={() => setIsVideoPlaying(true)}
           >
             <source src="/videos/hero-bg.mp4" type="video/mp4" />
           </video>
+          
+          {/* Premium Fade-out Poster Image */}
+          <img 
+            src="/bearings-hero.png" 
+            alt="Hero Background" 
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              transition: 'opacity 1s ease',
+              opacity: isVideoPlaying ? 0 : 1,
+              pointerEvents: 'none',
+              zIndex: 1
+            }}
+          />
+
           {/* Glass Effect Overlay */}
           <div className="hero-corp__overlay" style={{ 
             backdropFilter: 'blur(4px) saturate(110%)', 
