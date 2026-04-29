@@ -182,6 +182,8 @@ export default function Home() {
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.playbackRate = 0.6; // Slow playback as requested
+      videoRef.current.muted = true;
+      videoRef.current.playsInline = true;
       
       // Attempt to force play for mobile browsers
       const attemptPlay = async () => {
